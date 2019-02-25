@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<TextView android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="25sp"
+    android:paddingVertical="10sp"
+    android:text="hello"
+    android:textAlignment="gravity"
+    android:gravity="center"
+    >
+
+</TextView>-->
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dark"
+    >
+
+    <LinearLayout
+        android:layout_marginTop="10sp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/Tname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/Tvillage"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Villagename"
+                android:textSize="17dp"
+                android:textColor="#fff"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/Taccept"
+                style="@android:style/Widget.Holo.Button"
+                android:layout_width="300dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="10dp"
+                android:alpha="0.8"
+                android:layout_height="40sp"
+                android:text="Accept"
+                android:background="@drawable/shit"/>
+
+            <Button
+                android:id="@+id/Treject"
+                style="@android:style/Widget.Holo.Button"
+                android:layout_width="300dp"
+                android:layout_height="40sp"
+                android:layout_marginTop="10dp"
+                android:text="Reject"
+                android:alpha="0.8"
+                android:background="@drawable/shit"
+                android:layout_marginLeft="60dp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "372492646789",
+    "firebase_url": "https://ruralt-a393c.firebaseio.com",
+    "project_id": "ruralt-a393c",
+    "storage_bucket": "ruralt-a393c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:372492646789:android:80c428e6c64d1d7c",
+        "android_client_info": {
+          "package_name": "com.example.souhardkataria.ruralt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "372492646789-rcvs354fsp51ctfbmkupiaaqgqp5mdm3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.souhardkataria.ruralt",
+            "certificate_hash": "1c50c35a23af598612de661fb0bc5dc888ce6c08"
+          }
+        },
+        {
+          "client_id": "372492646789-0j4h7tkdc2s073113jkc111e1uiv86tu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCh-EvcovF10LzPOXSP2fBATE1Je6BY3L8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "372492646789-0j4h7tkdc2s073113jkc111e1uiv86tu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

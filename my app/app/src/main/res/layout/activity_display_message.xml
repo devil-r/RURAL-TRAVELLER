@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/reset_password_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingTop="50dp"
+    android:paddingRight="16dp"
+    android:background="@drawable/bc"
+    >
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="383dp"
+        android:layout_height="98dp"
+        app:srcCompat="@mipmap/ic_launcher" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="10dp"
+        android:text="Forgot your password?"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:text="To reset password, enter your email, press the button and check mail to follow instruction."
+        android:textSize="14dp" />
+
+    <EditText
+        android:id="@+id/edt_reset_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:hint="Your email here"
+        android:inputType="textEmailAddress" />
+
+    <Button
+        android:id="@+id/btn_reset_password"
+        style="@android:style/Widget.Holo.Button"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Reset Password"
+        android:background="@drawable/shit"/>
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@null"
+        android:text="BACK"
+        android:textColor="@android:color/holo_blue_dark" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/pass1"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="33dp" />
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>
