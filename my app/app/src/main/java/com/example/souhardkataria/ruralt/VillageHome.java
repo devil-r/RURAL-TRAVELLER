@@ -1,16 +1,10 @@
 package com.example.souhardkataria.ruralt;
 import android.content.Intent;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class VillageHome extends AppCompatActivity {
@@ -72,5 +66,8 @@ public class VillageHome extends AppCompatActivity {
                 startActivity(new Intent(this,Visitactivity.class));
                 break;
         }
+    }
+
+    public static class trying {
     }
 }
