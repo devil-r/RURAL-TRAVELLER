@@ -25,6 +25,8 @@ public class Adminlogin extends AppCompatActivity {
     FirebaseAuth mAuth;
     ProgressBar pb;
 
+    ///judt chcking how git works heloo kudoos;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
