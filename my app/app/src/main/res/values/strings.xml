@@ -25,4 +25,6 @@
     <string name="title_activity_display_message2">DisplayMessageActivity2</string>
     <string name="title_activity_home">Home</string>
     <string name="title_activity_userdash">userdash</string>
+    <string name="change_password">Change password</string>
+    <string name="logout">Logout</string>
 </resources>
