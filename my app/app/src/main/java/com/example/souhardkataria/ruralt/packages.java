@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -36,6 +37,7 @@ public class packages extends AppCompatActivity {
       final  TextView ratn=findViewById(R.id.mRate);
        final TextView itenn=findViewById(R.id.mItenary);
        final TextView durnn=findViewById(R.id.mDuration);
+       final ImageView imageView=findViewById(R.id.imageButton);
         Query query =FirebaseDatabase.getInstance().getReference().child("Packages").child(str).child("Image");
         // Image View to show
        query.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -64,7 +66,6 @@ viln.setText(str);
 ratn.setText(rate);
 itenn.setText(Itenary);
 durnn.setText(Dur);
-Log.d("Animesh",rate);
     }
 
     @Override
@@ -73,6 +74,17 @@ Log.d("Animesh",rate);
     }
 });
 
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+//            String uid= FirebaseAuth.getInstance().getUid();
+            String uid =FirebaseAuth.getInstance().getCurrentUser().getUid();
+           DatabaseReference ref= FirebaseDatabase.getInstance().getReference();
+ref.child(uid).child("Liked").child(str).setValue(1);
+                Toast.makeText(packages.this,"Package "+ str+" Added to Liked Packages Successfully !", Toast.LENGTH_SHORT).show();
+            }
+        });
         // Image url
 
 
