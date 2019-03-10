@@ -35,7 +35,7 @@
 
         <activity android:name=".VisitReview"></activity>
         <activity android:name=".ChatActivity" />
-
+        <activity android:name=".change_pass"/>
         <activity android:name=".TGDataForAdmin" />
         <activity android:name=".myAccount_wishlist" />
         <activity android:name=".Displayeat" />
