@@ -19,19 +19,25 @@
             android:id="@+id/changepass"
             android:layout_width="301dp"
             android:layout_height="39dp"
+            android:layout_marginTop="40dp"
             android:background="@drawable/shit"
             android:text="Change Password"
-            tools:layout_editor_absoluteX="40dp"
-            tools:layout_editor_absoluteY="289dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.509"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/logout"
             android:layout_width="303dp"
             android:layout_height="43dp"
+            android:layout_marginTop="44dp"
             android:background="@drawable/shit"
             android:text="Logout"
-            tools:layout_editor_absoluteX="40dp"
-            tools:layout_editor_absoluteY="383dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.518"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/changepass" />
     </android.support.constraint.ConstraintLayout>
 
 </android.support.constraint.ConstraintLayout>
