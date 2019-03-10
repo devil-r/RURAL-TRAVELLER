@@ -13,7 +13,6 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="STORAGE_SERVICES" />
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -21,7 +20,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".Displayeat"></activity>
+        <activity android:name=".TGDataForAdmin"></activity>
+        <activity android:name=".Displayeat" />
         <activity android:name=".Displayvisit" />
         <activity android:name=".Visitactivity" />
         <activity android:name=".Eatactivity" />
@@ -86,7 +86,6 @@
         <activity
             android:name=".DescriptionActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-
     </application>
 
 </manifest>
