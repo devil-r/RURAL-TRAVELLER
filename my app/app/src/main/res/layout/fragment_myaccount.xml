@@ -25,7 +25,7 @@
             android:id="@+id/favourites"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="favourites" />
+            android:text="Wishlist" />
 
         <Button
             android:id="@+id/faq"

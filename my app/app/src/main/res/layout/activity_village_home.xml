@@ -6,184 +6,208 @@
     android:layout_width="match_parent"
     android:fillViewport="true"
     xmlns:android="http://schemas.android.com/apk/res/android">
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/Const"
-    tools:context=".VillageHome"
-    android:background="@drawable/dark"
-    >
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/ToolbarVillHome"
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@color/colorPrimary"
-        />
+        android:layout_height="match_parent"
+        android:id="@+id/Const"
+        tools:context=".VillageHome"
+        android:background="@drawable/dark"
+        >
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/ToolbarVillHome"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/colorPrimary"
+            />
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/VillageHomePager"
-        android:layout_width="match_parent"
-        android:layout_height="350sp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ToolbarVillHome"
+        <android.support.v4.view.ViewPager
+            android:id="@+id/VillageHomePager"
+            android:layout_width="match_parent"
+            android:layout_height="350sp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ToolbarVillHome"
 
-        tools:layout_editor_absoluteY="0dp" />
+            tools:layout_editor_absoluteY="0dp" />
 
-    <TextView
-        android:id="@+id/VillageHomeLin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text=". . . . . . . ."
-        android:textSize="30dp"
-        android:textStyle="bold"
-        android:textColor="#000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/VillageHomePager"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="450dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:orientation="vertical"
-        android:padding="5dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/VillageHomeLin"
-        app:layout_constraintVertical_bias="0.0">
+        <TextView
+            android:id="@+id/VillageHomeLin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=". . . . . . . ."
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/VillageHomePager"/>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="5dp"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:padding="8dp">
+            android:layout_height="450dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="vertical"
+            android:padding="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/VillageHomeLin"
+            app:layout_constraintVertical_bias="0.0">
 
-            <Button
-                android:id="@+id/ButtonDecr"
-                android:layout_width="275dp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginRight="5dp"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:background="@drawable/border2"
-                android:elevation="10dp"
-                android:onClick="Cicked"
-                android:text="Description"
-                android:shadowColor="#E13F3D3D"
-                android:textColor="#fff"
-                android:textSize="18dp"
-                android:textStyle="bold" />
+                android:orientation="horizontal"
+                android:padding="8dp">
 
-            <Button
-                android:id="@+id/ButtonPackage"
-                android:layout_width="275dp"
+                <Button
+                    android:id="@+id/ButtonDecr"
+                    android:layout_width="275dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/border2"
+                    android:elevation="10dp"
+                    android:onClick="Cicked"
+                    android:text="Description"
+                    android:shadowColor="#E13F3D3D"
+                    android:textColor="#fff"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/ButtonPackage"
+                    android:layout_width="275dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:onClick="Cicked"
+                    android:text="Packages"
+                    android:shadowColor="#E13F3D3D"
+                    android:textColor="#fff"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="5dp"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:background="@drawable/border"
-                android:onClick="Cicked"
-                android:text="Packages"
-                android:shadowColor="#E13F3D3D"
-                android:textColor="#fff"
-                android:textSize="18dp"
-                android:textStyle="bold" />
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:text="">
+
+                <Button
+                    android:id="@+id/ButtonSplOcc"
+                    android:layout_width="275dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/border2"
+                    android:elevation="23dp"
+                    android:onClick="Cicked"
+                    android:text="Special Days"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/ButtonVisit"
+                    android:layout_width="275dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:onClick="Cicked"
+                    android:text="Worth A Visit"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <Button
+                    android:id="@+id/StayButton"
+                    android:layout_width="275dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/border2"
+                    android:onClick="Cicked"
+                    android:text="Tired??"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+
+                <Button
+                    android:id="@+id/Eat"
+                    android:layout_width="275dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:onClick="Cicked"
+                    android:text="Hungry??"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+
+                <Button
+                    android:id="@+id/map_button"
+                    android:layout_width="143dp"
+                    android:layout_height="106dp"
+                    android:layout_marginStart="121dp"
+                    android:layout_marginLeft="121dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="121dp"
+                    android:layout_marginRight="121dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@drawable/maps"
+                    android:text="Click here for maps"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+
+
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:padding="8dp"
-            android:text="">
-
-            <Button
-                android:id="@+id/ButtonSplOcc"
-                android:layout_width="275dp"
-                android:layout_height="match_parent"
-                android:layout_marginRight="5dp"
-                android:layout_weight="1"
-                android:background="@drawable/border2"
-                android:elevation="23dp"
-                android:onClick="Cicked"
-                android:text="Special Days"
-                android:textAllCaps="false"
-                android:textColor="#fff"
-                android:textSize="18dp"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/ButtonVisit"
-                android:layout_width="275dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="5dp"
-                android:layout_weight="1"
-                android:background="@drawable/border"
-                android:onClick="Cicked"
-                android:text="Worth A Visit"
-                android:textAllCaps="false"
-                android:textColor="#fff"
-                android:textSize="18dp"
-                android:textStyle="bold" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:padding="8dp">
-
-            <Button
-                android:id="@+id/StayButton"
-                android:layout_width="275dp"
-                android:layout_height="match_parent"
-                android:layout_marginRight="5dp"
-                android:layout_weight="1"
-                android:background="@drawable/border2"
-                android:onClick="Cicked"
-                android:text="Tired??"
-                android:textAllCaps="false"
-                android:textColor="#fff"
-                android:textSize="18dp"
-                android:textStyle="bold" />
-
-
-            <Button
-                android:id="@+id/Eat"
-                android:layout_width="275dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="5dp"
-                android:layout_weight="1"
-                android:background="@drawable/border"
-                android:onClick="Cicked"
-                android:text="Hungry??"
-                android:textAllCaps="false"
-                android:textColor="#fff"
-                android:textSize="18dp"
-                android:textStyle="bold" />
-        </LinearLayout>
-    </LinearLayout>
-
-</android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
 </ScrollView>
