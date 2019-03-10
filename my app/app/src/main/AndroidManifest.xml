@@ -38,6 +38,9 @@
         <activity
             android:name=".Rural_Traveller"
             android:label="@string/app_name">
+
+        </activity>
+        <activity android:name=".Start">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

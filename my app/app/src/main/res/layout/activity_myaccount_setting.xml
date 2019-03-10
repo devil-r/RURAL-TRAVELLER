@@ -7,22 +7,31 @@
     tools:context=".Home"
     android:background="@drawable/dark">
 
-    <LinearLayout
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="246dp">
 
 
         <Button
             android:id="@+id/settings_changepassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/change_password" />
+            android:layout_width="301dp"
+            android:layout_height="39dp"
+            android:background="@drawable/shit"
+            android:text="Change Password"
+            tools:layout_editor_absoluteX="40dp"
+            tools:layout_editor_absoluteY="289dp" />
+
         <Button
             android:id="@+id/settings_logout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/logout" />
-    </LinearLayout>
+            android:layout_width="303dp"
+            android:layout_height="43dp"
+            android:background="@drawable/shit"
+            android:text="Logout"
+            tools:layout_editor_absoluteX="40dp"
+            tools:layout_editor_absoluteY="383dp" />
+    </android.support.constraint.ConstraintLayout>
 
 </android.support.constraint.ConstraintLayout>
