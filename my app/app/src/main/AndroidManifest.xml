@@ -12,16 +12,16 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="STORAGE_SERVICES" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <permission
         android:name="com.example.permission.MAPS_RECEIVE"
-        android:protectionLevel="signature"/>
-    <uses-permission android:name="com.example.permission.MAPS_RECEIVE"/>
+        android:protectionLevel="signature" />
 
+    <uses-permission android:name="com.example.permission.MAPS_RECEIVE" />
 
     <application
         android:allowBackup="true"
@@ -30,11 +30,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-
-        <activity android:name=".TGDataForAdmin"></activity>
-
-        <activity android:name=".myAccount_wishlist"></activity>
-
+        <activity android:name=".VisitReview"></activity>
+        <activity android:name=".ChatActivity" />
+        <activity android:name=".TGDataForAdmin" />
+        <activity android:name=".myAccount_wishlist" />
         <activity android:name=".Displayeat" />
         <activity android:name=".Displayvisit" />
         <activity android:name=".Visitactivity" />
@@ -51,15 +50,15 @@
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".Rural_Traveller"
-            android:label="@string/app_name">
+            android:label="@string/app_name" />
 
-        </activity>
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
+
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps"></activity>
+            android:label="@string/title_activity_maps" />
         <activity android:name=".Start">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
