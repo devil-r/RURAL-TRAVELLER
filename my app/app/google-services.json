@@ -8,6 +8,37 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:372492646789:android:3e2bd608fba9e4eb",
+        "android_client_info": {
+          "package_name": "com.example.ruraltravellerdatabasebuilder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "372492646789-0j4h7tkdc2s073113jkc111e1uiv86tu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCh-EvcovF10LzPOXSP2fBATE1Je6BY3L8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:372492646789:android:80c428e6c64d1d7c",
         "android_client_info": {
           "package_name": "com.example.souhardkataria.ruralt"
@@ -20,6 +51,14 @@
           "android_info": {
             "package_name": "com.example.souhardkataria.ruralt",
             "certificate_hash": "1c50c35a23af598612de661fb0bc5dc888ce6c08"
+          }
+        },
+        {
+          "client_id": "372492646789-ganultqbngicoldemrv8m85rrrsdqd6i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.souhardkataria.ruralt",
+            "certificate_hash": "aa3c13a791b074c276536e34957bc9a21fe99304"
           }
         },
         {
