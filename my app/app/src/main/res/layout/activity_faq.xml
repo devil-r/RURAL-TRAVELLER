@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="MainActivity">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FOR ACCOUNT :"
+            android:paddingLeft="8dp"
+            android:paddingBottom="5dp"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="#b34d4d"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.  How can I edit my accout information?"
+            android:paddingLeft="8dp"
+            android:paddingBottom="5dp"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-  Go to MyAccount and press ACCOUNT DETAILS and edit your informations."
+            android:paddingLeft="30dp"
+            android:layout_margin="5dp"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            android:textColor="#808080"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2.  How to change password??"
+            android:paddingLeft="8dp"
+            android:paddingBottom="5dp"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-  Go to My Account and press ACCOUNT DETAILS and then go to change password."
+            android:paddingLeft="30dp"
+            android:layout_margin="5dp"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            android:textColor="#808080"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3.  How to register as travel guide?"
+            android:paddingLeft="8dp"
+            android:paddingBottom="5dp"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-  When you open the Rural travel app, you'll see option for 'Travel guide?' after clicking on this section you can register as a travel guide."
+            android:paddingLeft="30dp"
+            android:layout_margin="5dp"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            android:textColor="#808080"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4.  Forgot your password?"
+            android:paddingLeft="8dp"
+            android:paddingBottom="5dp"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-  Click on 'Forgot Password', then enter your registered email after that you'll get an mail on your email for reset password."
+            android:paddingLeft="30dp"
+            android:layout_margin="5dp"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            android:textColor="#808080"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FOR PACKAGES :"
+            android:paddingLeft="8dp"
+            android:paddingBottom="5dp"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="#b34d4d"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.  How to buy a package?"
+            android:paddingLeft="8dp"
+            android:paddingBottom="5dp"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-  Click on buy botton and fill your payment credentials. "
+            android:paddingLeft="30dp"
+            android:layout_margin="5dp"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            android:textColor="#808080"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2.  About package confirmation?"
+            android:paddingLeft="8dp"
+            android:paddingBottom="5dp"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-  Your request for buying package will be first confirmed by travel guide, and then you'll get notification for confirmation of your preferred package.  "
+            android:paddingLeft="30dp"
+            android:layout_margin="5dp"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            android:textColor="#808080"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3.  What services provided during package?"
+            android:paddingLeft="8dp"
+            android:paddingBottom="5dp"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-  The offers/services are described in your package description."
+            android:paddingLeft="30dp"
+            android:layout_margin="5dp"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            android:textColor="#808080"
+            />
+
+
+    </LinearLayout>
+</ScrollView>
