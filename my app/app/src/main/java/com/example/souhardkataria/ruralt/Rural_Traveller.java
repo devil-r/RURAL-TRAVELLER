@@ -1,12 +1,16 @@
 package com.example.souhardkataria.ruralt;
 
+import android.Manifest;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.app.LoaderManager.LoaderCallbacks;
 
@@ -45,12 +49,19 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import static android.Manifest.permission.ACCESS_COARSE_LOCATION;
+import static android.Manifest.permission.ACCESS_FINE_LOCATION;
+import static android.Manifest.permission.CALL_PHONE;
+import static android.Manifest.permission.CAMERA;
 import static android.Manifest.permission.READ_CONTACTS;
+import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
+import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 
 /**
  * A login screen that offers login via email/password.
  */
 public class Rural_Traveller extends AppCompatActivity /*implements LoaderCallbacks<Cursor> */ {
+
 
 //    /**
 //     * Id to identity READ_CONTACTS permission request.
@@ -79,6 +90,11 @@ public class Rural_Traveller extends AppCompatActivity /*implements LoaderCallba
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //Asking for permissions Starts from here
+        //Camera and Location and storage
+        if(ContextCompat.checkSelfPermission(Rural_Traveller.this,Manifest.permission.CAMERA)!=PackageManager.PERMISSION_GRANTED||ContextCompat.checkSelfPermission(Rural_Traveller.this,Manifest.permission.ACCESS_COARSE_LOCATION)!=PackageManager.PERMISSION_GRANTED||ContextCompat.checkSelfPermission(Rural_Traveller.this,Manifest.permission.ACCESS_FINE_LOCATION)!=PackageManager.PERMISSION_GRANTED||ContextCompat.checkSelfPermission(Rural_Traveller.this,Manifest.permission.WRITE_EXTERNAL_STORAGE)!=PackageManager.PERMISSION_GRANTED||ContextCompat.checkSelfPermission(Rural_Traveller.this,Manifest.permission.READ_EXTERNAL_STORAGE)!=PackageManager.PERMISSION_GRANTED)
+        ActivityCompat.requestPermissions(Rural_Traveller.this,new String[]{Manifest.permission.CAMERA,Manifest.permission.ACCESS_COARSE_LOCATION,Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.ACCESS_FINE_LOCATION,Manifest.permission.READ_EXTERNAL_STORAGE},1);
+        //Asking for location ended here
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rural__traveller);
         mAuth = FirebaseAuth.getInstance();
