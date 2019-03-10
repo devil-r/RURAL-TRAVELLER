@@ -1,14 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".userAccountFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
 
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="0dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <Button
+                    android:id="@+id/account_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="account details" />
+
+                <Button
+                    android:id="@+id/my_packages"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="my_packages" />
+
+                <Button
+                    android:id="@+id/favourites"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Wishlist" />
+
+                <Button
+                    android:id="@+id/faq"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="FaQ" />
+
+                <Button
+                    android:id="@+id/forum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Forum" />
+
+                <Button
+                    android:id="@+id/changePassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Change Password" />
+
+                <Button
+                    android:id="@+id/help"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="help" />
+
+                <Button
+                    android:id="@+id/our_team"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="our Team" />
+
+                <Button
+                    android:id="@+id/logout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Logout" />
+            </LinearLayout>
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
 </FrameLayout>
