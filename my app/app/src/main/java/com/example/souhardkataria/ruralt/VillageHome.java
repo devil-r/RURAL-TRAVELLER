@@ -80,8 +80,9 @@ public class VillageHome extends AppCompatActivity {
                 Toast.makeText(this, "Stay", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.ButtonPackage:
-
-                startActivity(new Intent(this,packages.class));
+                Intent intent1=new Intent(this,packages.class);
+                intent1.putExtra("Village",str);
+                startActivity(intent1);
                 break;
 
             case R.id.Eat:
