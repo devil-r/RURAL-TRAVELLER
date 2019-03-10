@@ -7,6 +7,8 @@
     android:fillViewport="true"
     android:background="@drawable/dark">
 
+
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -41,7 +43,7 @@
             android:textColor="#fff"
             android:textSize="18sp"
             android:textStyle="bold"
-             />
+            />
 
         <TextView
             android:id="@+id/mVillageview"
@@ -160,7 +162,7 @@
         <ScrollView
             android:id="@+id/mscroll1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="126dp"
             android:layout_above="@+id/mBuy"
             android:layout_below="@+id/textView8"
             android:layout_alignParentEnd="true"
@@ -179,10 +181,9 @@
                 android:layout_height="wrap_content" />
         </ScrollView>
 
-        <Button
-            android:id="@+id/mBuy"
-            android:layout_width="339dp"
-            android:layout_height="63dp"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
@@ -190,10 +191,23 @@
             android:layout_alignParentBottom="true"
             android:layout_marginStart="0dp"
             android:layout_marginLeft="0dp"
-            android:layout_marginEnd="72dp"
-            android:layout_marginRight="72dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
             android:layout_marginBottom="0dp"
-            android:text="Check Guide Availability" />
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/maccept"
+                android:layout_width="210dp"
+                android:layout_height="63dp"
+                android:text="Accept" />
+
+            <Button
+                android:id="@+id/mreject"
+                android:layout_width="200dp"
+                android:layout_height="63dp"
+                android:text="Reject" />
+        </LinearLayout>
 
         <ImageView
             android:id="@+id/imageButton5"
@@ -244,55 +258,6 @@
             android:layout_marginEnd="248dp"
             android:layout_marginRight="248dp"
             app:srcCompat="@drawable/ic_airport_shuttle_black_24dp"
-            tools:ignore="VectorDrawableCompat" />
-
-        <ImageView
-            android:id="@+id/imageButton1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/imageView3"
-            android:layout_alignLeft="@+id/imageView3"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginStart="361dp"
-            android:layout_marginLeft="361dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginRight="10dp"
-            app:srcCompat="@drawable/ic_thumb_up_black_24dp"
-            tools:ignore="VectorDrawableCompat" />
-
-        <TextView
-            android:id="@+id/textView13"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/imageView3"
-            android:layout_alignRight="@+id/imageView3"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="304dp"
-            android:layout_marginLeft="304dp"
-            android:layout_marginEnd="49dp"
-            android:layout_marginRight="49dp"
-            android:layout_marginBottom="610dp" />
-
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="66dp"
-            android:layout_height="62dp"
-            android:layout_alignStart="@+id/mBuy"
-            android:layout_alignLeft="@+id/mBuy"
-            android:layout_alignEnd="@+id/textView3"
-            android:layout_alignRight="@+id/textView3"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="341dp"
-            android:layout_marginLeft="341dp"
-            android:layout_marginEnd="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginBottom="0dp"
-            app:srcCompat="@drawable/ic_guide_available"
             tools:ignore="VectorDrawableCompat" />
 
 

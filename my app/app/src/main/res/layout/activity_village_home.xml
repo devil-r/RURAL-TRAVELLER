@@ -192,18 +192,34 @@
                     android:id="@+id/map_button"
                     android:layout_width="143dp"
                     android:layout_height="106dp"
-                    android:layout_marginStart="121dp"
-                    android:layout_marginLeft="121dp"
                     android:layout_marginTop="2dp"
-                    android:layout_marginEnd="121dp"
-                    android:layout_marginRight="121dp"
                     android:layout_marginBottom="2dp"
                     android:background="@drawable/maps"
                     android:text="Click here for maps"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginLeft="48dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="250dp"
+                    android:layout_marginRight="250dp"
+                    android:layout_marginBottom="54dp"
+                    android:text="How was your visit??"
+                    android:padding="7sp"
+                    android:background="@drawable/button_shape"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:onClick="Cicked"
+                    app:layout_constraintVertical_bias="1.0" />
             </android.support.constraint.ConstraintLayout>
 
 
