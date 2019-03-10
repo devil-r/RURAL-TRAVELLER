@@ -94,7 +94,7 @@ public class VillageHome extends AppCompatActivity {
                 startActivity(new Intent(this,VisitReview.class));
                 break;
 
-            case R.id.editText4:
+            case R.id.how:
                 startActivity(new Intent(this,Visitactivity.class));
                 break;
 

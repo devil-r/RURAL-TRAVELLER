@@ -30,12 +30,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-<<<<<<< HEAD
+
         <activity android:name=".packages_2"></activity>
-=======
+
         <activity android:name=".VisitReview"></activity>
         <activity android:name=".ChatActivity" />
->>>>>>> 0d4322d5a6df1d5acc5d41e62eb36f5ba8fd7236
+
         <activity android:name=".TGDataForAdmin" />
         <activity android:name=".myAccount_wishlist" />
         <activity android:name=".Displayeat" />
@@ -54,11 +54,11 @@
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".Rural_Traveller"
-<<<<<<< HEAD
+
             android:label="@string/app_name"></activity>
-=======
-            android:label="@string/app_name" />
->>>>>>> 0d4322d5a6df1d5acc5d41e62eb36f5ba8fd7236
+
+
+
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
