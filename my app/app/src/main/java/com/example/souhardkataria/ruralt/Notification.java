@@ -1,12 +1,14 @@
 package com.example.souhardkataria.ruralt;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -65,6 +67,12 @@ public class Notification extends Fragment {
         });
 
         mylist list=new mylist(view.getContext(),n);
+        l.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                startActivity(new Intent(getActivity(),packages.class));
+            }
+        });
         l.setAdapter(list);
         return view;
     }
