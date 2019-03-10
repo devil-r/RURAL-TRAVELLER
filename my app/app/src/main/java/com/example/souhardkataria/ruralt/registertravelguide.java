@@ -57,7 +57,6 @@ public class registertravelguide extends AppCompatActivity {
                 String id=mdatabase.push().getKey();
                 com.example.souhardkataria.ruralt.register_users u=new com.example.souhardkataria.ruralt.register_users(name.getText().toString(),email.getText().toString(),ph,dd,gender,spinner.getSelectedItem().toString(),
                         ad.getText().toString(),ab.getText().toString(),y.getText().toString(),id);
-                mdatabase.child(id).setValue(u);
                 int flag=0;
                 String ee=email.getText().toString();
                 if(name.getText().toString().isEmpty())
@@ -92,11 +91,12 @@ public class registertravelguide extends AppCompatActivity {
                 }
                 if(flag==0){
                     Toast.makeText(registertravelguide.this, "YOUR REGISTER REQUEST HAS BEEN SENT", Toast.LENGTH_LONG).show();
-
+                    mdatabase.child(id).setValue(u);
                     Intent i=new Intent(registertravelguide.this,travelguidelogin.class);
                     finish();
                     startActivity(i);
             }}
+
         });
         spinner = findViewById(R.id.spinner1);
 
