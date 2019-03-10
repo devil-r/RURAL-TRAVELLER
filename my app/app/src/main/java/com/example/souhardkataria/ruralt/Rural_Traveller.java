@@ -129,7 +129,7 @@ public class Rural_Traveller extends AppCompatActivity /*implements LoaderCallba
          });
 
 
-        Button signup  = ( Button )findViewById(R.id.button8);
+ /*       Button signup  = ( Button )findViewById(R.id.button8);
         signup.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -154,6 +154,7 @@ public class Rural_Traveller extends AppCompatActivity /*implements LoaderCallba
 
 
         });
+ */
 
         Button admin  = ( Button )findViewById(R.id.button3);
         admin.setOnClickListener(new View.OnClickListener() {
@@ -440,7 +441,9 @@ public class Rural_Traveller extends AppCompatActivity /*implements LoaderCallba
                                 Log.w(TAG, "signInWithEmail:failure", task.getException());
                                 Toast.makeText(Rural_Traveller.this, "Authentication failed.",
                                         Toast.LENGTH_SHORT).show();
-
+                                Toast.makeText(Rural_Traveller.this, "Incorrect email or password",
+                                        Toast.LENGTH_SHORT).show();
+                                recreate();
                                 //updateUI(null);
                             }
 
@@ -470,7 +473,7 @@ public class Rural_Traveller extends AppCompatActivity /*implements LoaderCallba
             return true;
         }
 
-        @Override
+  /*      @Override
         protected void onPostExecute(final Boolean success) {
             mAuthTask = null;
             //showProgress(false);
@@ -488,6 +491,7 @@ public class Rural_Traveller extends AppCompatActivity /*implements LoaderCallba
             mAuthTask = null;
             //showProgress(false);
         }
+    */
 
     }
 }
