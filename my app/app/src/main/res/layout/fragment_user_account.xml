@@ -55,6 +55,12 @@
                     android:text="Forum" />
 
                 <Button
+                    android:id="@+id/guideRating"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Guide Rating" />
+
+                <Button
                     android:id="@+id/changePassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
