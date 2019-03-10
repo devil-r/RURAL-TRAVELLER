@@ -26,6 +26,16 @@
     <string name="title_activity_home">Home</string>
     <string name="title_activity_userdash">userdash</string>
 
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">Map</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="change_password">Change password</string>
+    <string name="logout">Logout</string>
+
 </resources>
