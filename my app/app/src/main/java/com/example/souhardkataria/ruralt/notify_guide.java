@@ -1,10 +1,10 @@
 package com.example.souhardkataria.ruralt;
 
 public class notify_guide {
-    String notification;
-    notify_guide(String s)
+    String notification;String village;String id;
+    notify_guide(String s,String v,String id)
     {
-        notification=s;
+        notification=s;village=v;this.id=id;
     }
 }
 
