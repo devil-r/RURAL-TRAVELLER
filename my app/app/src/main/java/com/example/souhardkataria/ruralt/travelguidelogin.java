@@ -83,6 +83,8 @@ public class travelguidelogin extends AppCompatActivity implements View.OnClickL
                 }
                 if(flag==0)
                 {
+                    mAuth = null;
+                    mAuth = FirebaseAuth.getInstance();
                     mAuth.signInWithEmailAndPassword(emaillayout.getText().toString(), passwordlayout.getText().toString())
                             .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                                 @Override
