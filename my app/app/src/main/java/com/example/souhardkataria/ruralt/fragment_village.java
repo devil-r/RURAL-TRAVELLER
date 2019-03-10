@@ -30,7 +30,7 @@ public class fragment_village extends android.support.v4.app.Fragment {
         View view = inflater.inflate(R.layout.fragment_villages,null);
 
         final TextView[] txt = {view.findViewById(R.id.textView5),view.findViewById(R.id.textView10),view.findViewById(R.id.textView7),view.findViewById(R.id.textView8),
-                view.findViewById(R.id.textView9),view.findViewById(R.id.textView6)};
+                view.findViewById(R.id.textView9),view.findViewById(R.id.textView6),view.findViewById(R.id.textView11),view.findViewById(R.id.textView12)};
 
 
         txt[0].setOnClickListener(new View.OnClickListener() {
@@ -83,6 +83,22 @@ public class fragment_village extends android.support.v4.app.Fragment {
             public void onClick(View v) {
 
                 String st = txt[5].getText().toString();
+                click.Villagestart(st);
+            }
+        });
+        txt[6].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String st = txt[6].getText().toString();
+                click.Villagestart(st);
+            }
+        });
+        txt[7].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String st = txt[7].getText().toString();
                 click.Villagestart(st);
             }
         });
