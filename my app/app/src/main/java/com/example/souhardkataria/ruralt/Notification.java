@@ -19,6 +19,8 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
+import static com.example.souhardkataria.ruralt.VillageHome.str;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -44,16 +46,16 @@ public class Notification extends Fragment {
         l=(ListView) view.findViewById(R.id.list);
         //final ArrayAdapter<String> adapter=new ArrayAdapter<String>(guide_page.this,android.R.layout.simple_list_item_1,items);
         //l.setAdapter(adapter);
-        def= FirebaseDatabase.getInstance().getReference("registers");
+        def= FirebaseDatabase.getInstance().getReference("Notify_guide").child("noti");
 
         def.addValueEventListener(new ValueEventListener() {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for(DataSnapshot data:dataSnapshot.getChildren())
                 {
-                    register_users u=data.getValue(register_users.class);
-                    names.add(u.name);
-                    re.add(u.village);
-                    n.add(new notify_guide(u.name+" wants to buy this package from "+u.village));
+                    String id=def.getKey();
+                    pakage_noti u=data.getValue(pakage_noti.class);
+
+                    n.add(new notify_guide(u.name+" wants to buy this package from your village",u.village,id));
                 }
                 //adapter.notifyDataSetChanged();
 
@@ -66,11 +68,15 @@ public class Notification extends Fragment {
             }
         });
 
-        mylist list=new mylist(view.getContext(),n);
+        final mylist list=new mylist(view.getContext(),n);
         l.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                startActivity(new Intent(getActivity(),packages.class));
+                Intent intent1=new Intent(getActivity(),packages_2.class);
+                notify_guide p=(notify_guide)l.getItemAtPosition(position);
+                intent1.putExtra("Village",p.village);
+                intent1.putExtra("notid",p.id);
+                startActivity(intent1);
             }
         });
         l.setAdapter(list);

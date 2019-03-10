@@ -23,6 +23,7 @@ import com.google.firebase.database.ValueEventListener;
 public class packages extends AppCompatActivity {
     private DatabaseReference mdatabase;
     String val;
+    String uname="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,7 +46,6 @@ public class packages extends AppCompatActivity {
            @Override
            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                    val=dataSnapshot.getValue(String.class);
-               Log.v("Animesh",val);
                imgLoader.DisplayImage(val, loader, image);
            }
 
@@ -75,13 +75,14 @@ durnn.setText(Dur);
     }
 });
 
+
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
 //            String uid= FirebaseAuth.getInstance().getUid();
             String uid =FirebaseAuth.getInstance().getCurrentUser().getUid();
-           DatabaseReference ref= FirebaseDatabase.getInstance().getReference();
+            DatabaseReference ref= FirebaseDatabase.getInstance().getReference();
 ref.child(uid).child("Liked").child(str).setValue(str);
                 Toast.makeText(packages.this,"Package "+ str+" Added to Liked Packages", Toast.LENGTH_SHORT).show();
             }
@@ -99,14 +100,16 @@ ref.child(uid).child("Liked").child(str).setValue(str);
        // val="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXjL7j3u_FL6TXAxN7B74JIaY9Qw3IMOfkQ3csGkr57blceF3M3A";
 
 
-        mdatabase= FirebaseDatabase.getInstance().getReference("Guides");
+        mdatabase= FirebaseDatabase.getInstance().getReference("Notify_guide");
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String id=mdatabase.push().getKey();
-                pakage_noti p=new pakage_noti("suresh");
-                mdatabase.child("4O50aa84M8htAIZGS0qaPa0BrDJ3").child("noti").child(id).setValue(p);
-                Toast.makeText(packages.this, "You bought this package", Toast.LENGTH_SHORT).show();
+                uname="samar";
+                pakage_noti p=new pakage_noti(uname,str);
+                Toast.makeText(packages.this, uname, Toast.LENGTH_SHORT).show();
+                mdatabase.child("noti").child(id).setValue(p);
+                Toast.makeText(packages.this, "Availability Request Sent", Toast.LENGTH_SHORT).show();
                 finish();
             }
         });
