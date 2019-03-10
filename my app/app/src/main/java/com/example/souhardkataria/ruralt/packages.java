@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -61,7 +62,7 @@ query1.addListenerForSingleValueEvent(new ValueEventListener() {
     String rate,Dur,Itenary;
     rate=dataSnapshot.child("Rate").getValue(String.class);
     Dur=dataSnapshot.child("Duration").getValue(String.class);
-    Itenary=dataSnapshot.child("Description").getValue(String.class);
+    Itenary=dataSnapshot.child("Overview").getValue(String.class);
 viln.setText(str);
 ratn.setText(rate);
 itenn.setText(Itenary);
@@ -81,8 +82,8 @@ durnn.setText(Dur);
 //            String uid= FirebaseAuth.getInstance().getUid();
             String uid =FirebaseAuth.getInstance().getCurrentUser().getUid();
            DatabaseReference ref= FirebaseDatabase.getInstance().getReference();
-ref.child(uid).child("Liked").child(str).setValue(1);
-                Toast.makeText(packages.this,"Package "+ str+" Added to Liked Packages Successfully !", Toast.LENGTH_SHORT).show();
+ref.child(uid).child("Liked").child(str).setValue(str);
+                Toast.makeText(packages.this,"Package "+ str+" Added to Liked Packages", Toast.LENGTH_SHORT).show();
             }
         });
         // Image url
@@ -109,5 +110,8 @@ ref.child(uid).child("Liked").child(str).setValue(1);
                 finish();
             }
         });
+        itenn.setMovementMethod(new ScrollingMovementMethod());
+
+
     }
 }

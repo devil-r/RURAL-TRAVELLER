@@ -42,6 +42,7 @@ public class mylist extends ArrayAdapter<notify_guide> {
             listitemview=LayoutInflater.from(getContext()).inflate(R.layout.mylist,parent,false);
         }
         notify_guide n=getItem(position);
+
         TextView t=(TextView) listitemview.findViewById(R.id.Tname);
         t.setText(n.notification);
         return listitemview;
