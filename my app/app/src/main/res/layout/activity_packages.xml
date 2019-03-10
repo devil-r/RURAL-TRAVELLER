@@ -157,10 +157,10 @@
             android:textColor="#fff"
             android:textSize="14sp" />
 
-        <TextView
-            android:id="@+id/mItenary"
+        <ScrollView
+            android:id="@+id/mscroll1"
             android:layout_width="match_parent"
-            android:layout_height="181dp"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/textView8"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
@@ -169,14 +169,20 @@
             android:layout_marginEnd="0dp"
             android:layout_marginRight="0dp"
             android:layout_marginBottom="3dp"
-            android:text="ust visit. The town also offers some popular trekking routes that will take you through the beautiful valleys of Uttarakhand. "
+            android:scrollbars="vertical"
             android:textColor="#fff"
-            android:textSize="14sp" />
+            android:textSize="14sp">
+
+            <TextView
+                android:id="@+id/mItenary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </ScrollView>
 
         <Button
             android:id="@+id/mBuy"
-            android:layout_width="101dp"
-            android:layout_height="73dp"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
@@ -184,8 +190,8 @@
             android:layout_alignParentBottom="true"
             android:layout_marginStart="162dp"
             android:layout_marginLeft="162dp"
-            android:layout_marginEnd="149dp"
-            android:layout_marginRight="149dp"
+            android:layout_marginEnd="148dp"
+            android:layout_marginRight="148dp"
             android:layout_marginBottom="4dp"
             android:background="@drawable/shit"
             android:text="BUY" />
