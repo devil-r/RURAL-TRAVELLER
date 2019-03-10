@@ -17,28 +17,24 @@
 
         android:layout_marginStart="52dp"
         android:layout_marginLeft="52dp"
-        android:layout_marginTop="397dp"
-        android:layout_marginEnd="67dp"
-        android:layout_marginRight="67dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/start_bor"
         android:text="SIGN UP"
-        app:layout_constraintEnd_toStartOf="@+id/start_login"
-        app:layout_constraintHorizontal_bias="0.111"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/start_login"
         style="@android:style/Widget.Holo.Button"
         android:layout_width="138dp"
         android:layout_height="48dp"
-        android:layout_marginTop="397dp"
         android:layout_marginEnd="52dp"
         android:layout_marginRight="52dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/start_bor"
         android:text="LOGIN"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/button"
@@ -49,7 +45,6 @@
 
         android:layout_marginStart="144dp"
         android:layout_marginLeft="144dp"
-        android:layout_marginTop="449dp"
         android:layout_marginEnd="144dp"
         android:layout_marginRight="144dp"
         android:layout_marginBottom="40dp"
@@ -57,8 +52,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView13"
