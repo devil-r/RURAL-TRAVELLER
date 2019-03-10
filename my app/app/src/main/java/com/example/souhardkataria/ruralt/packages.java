@@ -37,7 +37,7 @@ public class packages extends AppCompatActivity {
       final  TextView ratn=findViewById(R.id.mRate);
        final TextView itenn=findViewById(R.id.mItenary);
        final TextView durnn=findViewById(R.id.mDuration);
-       final ImageView imageView=findViewById(R.id.imageButton);
+       final ImageView imageView=findViewById(R.id.imageButton1);
         Query query =FirebaseDatabase.getInstance().getReference().child("Packages").child(str).child("Image");
         // Image View to show
        query.addListenerForSingleValueEvent(new ValueEventListener() {
