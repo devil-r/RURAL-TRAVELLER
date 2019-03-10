@@ -51,6 +51,8 @@ public class userdash extends AppCompatActivity implements fragment_village.CLIC
             @Override
             public void onClick(View view) {
                 vp.setCurrentItem(1);
+
+
             }
         });
        /* Dpackage.setOnClickListener(new View.OnClickListener() {
