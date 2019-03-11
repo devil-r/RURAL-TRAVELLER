@@ -4,10 +4,12 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -29,7 +31,7 @@ public class myAccount_wishlist extends AppCompatActivity {
         setContentView(R.layout.activity_my_account_wishlist);
         mAuth = FirebaseAuth.getInstance();
         GetWishlist();
-       adapter = new ArrayAdapter<String>(this,R.layout.activity_my_account_wishlist,Array);
+       adapter = new ArrayAdapter<String>(this,R.layout.listview_textbox,Array);
         ListView listView = this.findViewById(R.id.list_myaccount);
         listView.setAdapter(adapter);
 
@@ -45,14 +47,19 @@ public class myAccount_wishlist extends AppCompatActivity {
                 Array.clear();
                 if(dataSnapshot.child(id).exists())
                 {
-                    for(DataSnapshot snapshot: dataSnapshot.child(id).getChildren())
-                    {
-                        String name = null;
-                                name= snapshot.getKey();
-                        Array.add(name);
+                    try {
+                        for (DataSnapshot snapshot : dataSnapshot.child(id).child("Liked").getChildren()) {
+                            String name = null;
+                            name = snapshot.getKey();
+                            Array.add(name);
+                        }
+                        adapter.notifyDataSetChanged();
                     }
-                    adapter.notifyDataSetChanged();
-
+                    catch (Exception e)
+                    {
+                        Log.d("WishlistActivity",e.getMessage());
+                        Toast.makeText(myAccount_wishlist.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
                 }
 
 

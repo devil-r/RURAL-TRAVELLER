@@ -54,7 +54,35 @@ public class userAccountFragment extends Fragment {
 
 
         });
+
+        Button Wishlist = view.findViewById(R.id.favourites);
+        Wishlist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(),myAccount_wishlist.class));
+            }
+        });
+
+        Button FAQ = view.findViewById(R.id.faq);
+        FAQ.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(),Faq.class));
+
+            }
+        });
+
+        Button Forum = view.findViewById(R.id.forum);
+        Forum.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(),Forum.class));
+
+            }
+        });
+
         return view;
+
     }
 
 }
