@@ -38,17 +38,17 @@ public class userExploreFragment extends Fragment implements View.OnClickListene
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.card1:
-                Intent intent1=new Intent(getActivity(),packages.class);
+                Intent intent1=new Intent(getActivity(),VillageHome.class);
                 intent1.putExtra("Village","Landour");
                 startActivity(intent1);
                 break;
             case R.id.card2:
-                Intent intent2=new Intent(getActivity(),packages.class);
+                Intent intent2=new Intent(getActivity(),VillageHome.class);
                 intent2.putExtra("Village","Malana");
                 startActivity(intent2);
                 break;
             case R.id.card3:
-                Intent intent3=new Intent(getActivity(),packages.class);
+                Intent intent3=new Intent(getActivity(),VillageHome.class);
                 intent3.putExtra("Village","Diskit");
                 startActivity(intent3);
                 break;

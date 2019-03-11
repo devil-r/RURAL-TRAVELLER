@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/list_style"
+        android:layout_marginLeft="2sp"
+        android:layout_marginRight="2sp"
+        android:padding="5dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/Design_image"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@mipmap/ic_launcher"/>
+        <TextView
+            android:id="@+id/Tname"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="#858080"
+            android:text="kjadldas maa kaa bsda ljdflkjfsafjfjdjfasklfjslfjadfjfjsaldfjl;fjafk;ljasdlkjfslafjljdsjlfjaslfjsalfjsal;fjdjflajf"
+            android:gravity="center_vertical"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="10sp"
+            app:layout_constraintStart_toEndOf="@id/Design_image"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/Tap"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>

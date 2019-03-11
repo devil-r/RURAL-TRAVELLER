@@ -25,7 +25,7 @@ public class packages_2 extends AppCompatActivity implements View.OnClickListene
     private DatabaseReference mdatabase;
     String val;
     String uname="";
-    String notid;
+    String notid;String vv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +37,7 @@ public class packages_2 extends AppCompatActivity implements View.OnClickListene
         final int loader = R.drawable.loader;
         Intent intent = getIntent();
         val="";
-        final String  str = intent.getStringExtra("Village");
+        final String  str = intent.getStringExtra("Village");vv=str;
         notid=intent.getStringExtra("notid");
         final ImageView image = findViewById(R.id.imageView3);
         final ImageLoader imgLoader = new ImageLoader(getApplicationContext());
@@ -108,6 +108,11 @@ public class packages_2 extends AppCompatActivity implements View.OnClickListene
         switch (v.getId()){
         case R.id.maccept:
             mdatabase.child(notid).removeValue();
+            //Toast.makeText(this, "You can chat with user on chat box", Toast.LENGTH_SHORT).show();
+            String id=mdatabase.push().getKey();
+            uname="samar";
+            pakage_noti p=new pakage_noti(uname,vv);
+            mdatabase.child("noti").child(id).setValue(p);
             Toast.makeText(this, "You can chat with user on chat box", Toast.LENGTH_SHORT).show();
             finish();
             case R.id.mreject:
