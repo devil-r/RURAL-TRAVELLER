@@ -98,14 +98,16 @@ public class ChatFragment extends Fragment {
        String dd = "wz6im7lvJhaDolygbtcXIjQCq7i2",
         aashay = "UdVc64SsDybk4eIGHjumBaWB4qo1";
 
-       if (User.equals(dd) && list.size()<1)
+       if (list.size()<1)
        {
+           list.clear();
            User = "DD";
            list.add("Aashay");
            adapter1.notifyDataSetChanged();
        }
-       else if(list.size()<1)
+       else if(User.equals(aashay))
        {
+           list.clear();
            User = "Aashay";
            list.add("DD");
            adapter1.notifyDataSetChanged();
@@ -139,13 +141,14 @@ public class ChatFragment extends Fragment {
         }
 
         @Override
-        public View getView(final int position, View convertView, ViewGroup parent) {
+        public View getView( int position, View convertView, ViewGroup parent) {
 
             //Setting up view on the list
             Context context = getContext();
             convertView = ((FragmentActivity) context).getLayoutInflater().inflate(R.layout.chatdesign,parent,false);
             TextView text = convertView.findViewById(R.id.Design_text);
             text.setText(list.get(position));
+            final int i = position;
             text.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -154,8 +157,8 @@ public class ChatFragment extends Fragment {
                     ChatFragment.Opened = 1;
                     Intent intent = new Intent(guidedash.context,ChatActivity.class);
                     intent.putExtra("User",User);
-                    intent.putExtra("Reciever",list.get(position));
-                    intent.putExtra("Number",position);
+                    intent.putExtra("Reciever",list.get(i));
+                    intent.putExtra("Number",i);
                     startActivity(intent);
                 }
             });
