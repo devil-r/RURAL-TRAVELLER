@@ -67,9 +67,8 @@ class myRecyclerAdapter extends RecyclerView.Adapter<myRecyclerAdapter.myViewHol
     public int getItemViewType(int position) {
         if(User.equals(chats.get(position).sender))
             return ChatActivity.Right;
-        else //if(chats.get(position).sender == Reciever[1])
+        else// if(chats.get(position).sender.equals(Reciever))
             return ChatActivity.Left;
-
     }
 
     class myViewHolder extends RecyclerView.ViewHolder{
