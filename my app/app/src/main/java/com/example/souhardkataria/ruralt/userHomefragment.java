@@ -26,19 +26,17 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class userHomefragment extends Fragment {
     FirebaseAuth mAuth;
     DatabaseReference mRef;
     TextView name;
     ListView listPackage;
     ArrayList<PackageClass> array=new ArrayList<>();
+    PackageAdapter adapter;
+
     public userHomefragment() {
         // Required empty public constructor
     }
-    PackageAdapter adapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
