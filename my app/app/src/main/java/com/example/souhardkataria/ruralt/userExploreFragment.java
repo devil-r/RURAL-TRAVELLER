@@ -9,6 +9,7 @@ import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 
 /**
@@ -16,7 +17,7 @@ import android.view.ViewGroup;
  */
 public class userExploreFragment extends Fragment implements View.OnClickListener {
     CardView c1,c2,c3;
-
+    ImageButton search;
     public userExploreFragment() {
         // Required empty public constructor
     }
@@ -31,6 +32,15 @@ public class userExploreFragment extends Fragment implements View.OnClickListene
         c2=(CardView) view.findViewById(R.id.card2);
         c3=(CardView) view.findViewById(R.id.card3);
         c1.setOnClickListener(this);c2.setOnClickListener(this);c3.setOnClickListener(this);
+        search=view.findViewById(R.id.searchIntent);
+        search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //go to search page
+                Intent in=new Intent(getContext(),SearchPage.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(in);
+            }
+        });
         return view;
     }
 
