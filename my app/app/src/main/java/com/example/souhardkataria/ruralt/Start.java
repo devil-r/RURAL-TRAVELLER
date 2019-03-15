@@ -19,7 +19,7 @@ public class Start extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Start.this, travelguidelogin.class);
-                startActivity(intent);
+                startActivity(intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
 
             }
 
@@ -32,7 +32,7 @@ public class Start extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(Start.this, DisplayMessageActivity2.class);
-                startActivity(i);
+                startActivity(i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
 
             }
 
@@ -45,11 +45,18 @@ public class Start extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(Start.this, Rural_Traveller.class);
-                startActivity(i);
+                startActivity(i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
 
             }
 
 
+        });
+        Button admin=findViewById(R.id.button2);
+        admin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),Adminlogin.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+            }
         });
     }
 }
