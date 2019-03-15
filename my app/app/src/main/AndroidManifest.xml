@@ -33,6 +33,7 @@
 
         <activity android:name=".Faq"></activity>
         <activity android:name=".Forum" />
+        <activity android:name=".SearchPage"/>
         <activity android:name=".packages_2" />
         <activity android:name=".VisitReview" />
         <activity android:name=".ChatActivity" />
@@ -57,7 +58,7 @@
             android:name=".Rural_Traveller"
 
             android:label="@string/app_name" />
-</activity>
+
 
 
         <meta-data

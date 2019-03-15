@@ -2,6 +2,7 @@ package com.example.souhardkataria.ruralt;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -11,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -32,6 +34,7 @@ public class userHomefragment extends Fragment {
     TextView name;
     ListView listPackage;
     ArrayList<PackageClass> array=new ArrayList<>();
+    ArrayList<String> ids=new ArrayList<>();
     PackageAdapter adapter;
 
     public userHomefragment() {
@@ -59,8 +62,10 @@ public class userHomefragment extends Fragment {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     array.clear();
+                    ids.clear();
                     for (DataSnapshot i : dataSnapshot.getChildren()) {
                         array.add(i.getValue(PackageClass.class));
+                        ids.add(i.getKey());
                     }
                     //Toast.makeText(getContext(),array.get(2).name+"",Toast.LENGTH_LONG).show();
                     adapter.notifyDataSetChanged();
@@ -106,11 +111,18 @@ public class userHomefragment extends Fragment {
             TextView name=view.findViewById(R.id.name1);
             TextView duration=view.findViewById(R.id.duration);
             TextView rate=view.findViewById(R.id.rate);
+            LinearLayout ll=view.findViewById(R.id.ll);
             name.setText(array.get(i).name);
             duration.setText(array.get(i).Duration);
-            rate.setText(array.get(i).Rate);
-            Toast.makeText(getContext(),"Get View "+i+" "+array.get(i).name,Toast.LENGTH_LONG).show();
-
+            rate.setText("Rs. "+array.get(i).Rate);
+            final Intent in=new Intent(context,packages.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            in.putExtra("Village",ids.get(i));
+            ll.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    startActivity(in);
+                }
+            });
             return view;
         }
     }

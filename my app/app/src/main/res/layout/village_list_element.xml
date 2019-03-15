@@ -3,13 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/package_background">
+    android:layout_height="wrap_content">
 
     <LinearLayout
-        android:id="@+id/ll"
-        android:layout_width="match_parent"
+        android:id="@+id/touch"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#80ffffff"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -18,35 +20,25 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/name1"
+            android:id="@+id/villageBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="20sp"
-            android:paddingTop="10sp"
-            android:text="TextView"
-            android:textColor="#047"
-            android:textSize="21sp" />
+            android:layout_marginTop="5dp"
+            android:paddingLeft="5dp"
+            android:text="Village name"
+            android:textColor="#036"
+            android:textSize="25dp"
+            android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/duration"
+            android:id="@+id/locBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="20sp"
-            android:paddingTop="5sp"
-            android:text="TextView"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="5dp"
+            android:paddingLeft="5dp"
+            android:text="District, State"
             android:textColor="#047"
-
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/rate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="20sp"
-            android:paddingTop="5sp"
-            android:text="TextView"
-            android:textColor="#047"
-
-            android:textSize="18sp" />
+            android:textSize="18dp" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
