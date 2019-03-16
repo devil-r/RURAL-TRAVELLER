@@ -48,6 +48,7 @@
         <activity android:name=".rating" />
         <activity android:name=".packages" />
         <activity android:name=".Search" />
+        <activity android:name=".wallet"/>
         <activity
             android:name=".Home"
             android:label="@string/title_activity_home"
