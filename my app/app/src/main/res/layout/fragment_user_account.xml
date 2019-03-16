@@ -29,6 +29,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="account details" />
+                <Button
+                    android:id="@+id/wallet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="My Wallet" />
 
                 <Button
                     android:id="@+id/my_packages"

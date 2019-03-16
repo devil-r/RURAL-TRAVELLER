@@ -30,10 +30,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-
         <activity android:name=".Faq"></activity>
         <activity android:name=".Forum" />
-        <activity android:name=".SearchPage"/>
         <activity android:name=".packages_2" />
         <activity android:name=".VisitReview" />
         <activity android:name=".ChatActivity" />
@@ -56,10 +54,7 @@
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".Rural_Traveller"
-
             android:label="@string/app_name" />
-
-
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"

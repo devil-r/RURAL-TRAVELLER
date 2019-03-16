@@ -3,6 +3,7 @@ package com.example.souhardkataria.ruralt;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -23,13 +24,7 @@ public class fragment_myaccount extends Fragment {
         View root=inflater.inflate(R.layout.fragment_myaccount, null);
 
         Button btn=root.findViewById(R.id.account_details);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //click.villageStart(null);
 
-            }
-        });
 
         return root;
     }
