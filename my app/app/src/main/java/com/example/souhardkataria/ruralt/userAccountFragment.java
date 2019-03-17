@@ -71,7 +71,13 @@ public class userAccountFragment extends Fragment {
 
             }
         });
-
+        Button wallet=view.findViewById(R.id.wallet);
+        wallet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(),wallet.class));
+            }
+        });
         Button Forum = view.findViewById(R.id.forum);
         Forum.setOnClickListener(new View.OnClickListener() {
             @Override
