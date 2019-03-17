@@ -30,12 +30,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".Faq"></activity>
+        <activity android:name=".my_account_mypackages"></activity>
+        <activity android:name=".Faq" />
         <activity android:name=".Forum" />
         <activity android:name=".packages_2" />
         <activity android:name=".VisitReview" />
         <activity android:name=".ChatActivity" />
-        <activity android:name=".change_pass"/>
+        <activity android:name=".change_pass" />
         <activity android:name=".TGDataForAdmin" />
         <activity android:name=".myAccount_wishlist" />
         <activity android:name=".Displayeat" />
@@ -48,7 +49,7 @@
         <activity android:name=".rating" />
         <activity android:name=".packages" />
         <activity android:name=".Search" />
-        <activity android:name=".wallet"/>
+        <activity android:name=".wallet" />
         <activity
             android:name=".Home"
             android:label="@string/title_activity_home"

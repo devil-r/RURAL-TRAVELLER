@@ -86,6 +86,14 @@ public class userAccountFragment extends Fragment {
 
             }
         });
+        Button My_packeges = view.findViewById(R.id.my_packages);
+        My_packeges.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(),my_account_mypackages.class));
+
+            }
+        });
 
         return view;
 
