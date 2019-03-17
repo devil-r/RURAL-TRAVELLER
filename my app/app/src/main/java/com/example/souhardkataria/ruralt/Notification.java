@@ -30,7 +30,7 @@ public class Notification extends Fragment {
     DatabaseReference def;
     ArrayList<String> names=new ArrayList<String>();
     ArrayList<String> re=new ArrayList<>();
-    ArrayList<notify_guide> n=new ArrayList<>();
+    ArrayList<pakage_noti> n=new ArrayList<>();
     ListView l;
     public Notification() {
         // Required empty public constructor
@@ -55,7 +55,7 @@ public class Notification extends Fragment {
                     String id=def.getKey();
                     pakage_noti u=data.getValue(pakage_noti.class);
 
-                    n.add(new notify_guide(u.name+" wants to buy this package from your village",u.village,id));
+                    n.add(new pakage_noti(u.name+" wants to buy this package from your village",u.village,u.notiid,u.uid));
                 }
                 //adapter.notifyDataSetChanged();
 
@@ -73,9 +73,10 @@ public class Notification extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent1=new Intent(getActivity(),packages_2.class);
-                notify_guide p=(notify_guide)l.getItemAtPosition(position);
+                pakage_noti p=(pakage_noti) l.getItemAtPosition(position);
                 intent1.putExtra("Village",p.village);
-                intent1.putExtra("notid",p.id);
+                intent1.putExtra("notid",p.notiid);
+                intent1.putExtra("uid",p.uid);
                 startActivity(intent1);
             }
         });

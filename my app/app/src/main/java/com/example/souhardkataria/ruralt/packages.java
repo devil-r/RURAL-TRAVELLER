@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -106,7 +107,8 @@ ref.child(uid).child("Liked").child(str).setValue(str);
             public void onClick(View v) {
                 String id=mdatabase.push().getKey();
                 uname="samar";
-                pakage_noti p=new pakage_noti(uname,str);
+                FirebaseUser ff=FirebaseAuth.getInstance().getCurrentUser();
+                pakage_noti p=new pakage_noti(uname,str,id,ff.getUid());
                 Toast.makeText(packages.this, uname, Toast.LENGTH_SHORT).show();
                 mdatabase.child("noti").child(id).setValue(p);
                 Toast.makeText(packages.this, "Availability Request Sent", Toast.LENGTH_SHORT).show();

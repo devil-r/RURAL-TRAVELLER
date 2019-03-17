@@ -25,9 +25,9 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 import java.util.concurrent.Executor;
 
-public class mylist extends ArrayAdapter<notify_guide> {
-    ArrayList<notify_guide>c;
-    public mylist(Context context, ArrayList<notify_guide> n)
+public class mylist extends ArrayAdapter<pakage_noti> {
+    ArrayList<pakage_noti>c;
+    public mylist(Context context, ArrayList<pakage_noti> n)
     {
         super(context,0,n);
         c=n;
@@ -41,10 +41,10 @@ public class mylist extends ArrayAdapter<notify_guide> {
         {
             listitemview=LayoutInflater.from(getContext()).inflate(R.layout.mylist,parent,false);
         }
-        notify_guide n=getItem(position);
+        pakage_noti n=getItem(position);
 
         TextView t=(TextView) listitemview.findViewById(R.id.Tname);
-        t.setText(n.notification);
+        t.setText(n.name);
         return listitemview;
     }
 

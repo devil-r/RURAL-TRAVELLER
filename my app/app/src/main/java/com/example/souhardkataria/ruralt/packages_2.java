@@ -25,7 +25,8 @@ public class packages_2 extends AppCompatActivity implements View.OnClickListene
     private DatabaseReference mdatabase;
     String val;
     String uname="";
-    String notid;String vv;
+    String notid;String vv;String uid;
+    DatabaseReference f=FirebaseDatabase.getInstance().getReference("my_packages");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +38,7 @@ public class packages_2 extends AppCompatActivity implements View.OnClickListene
         final int loader = R.drawable.loader;
         Intent intent = getIntent();
         val="";
+        uid=intent.getStringExtra("uid");
         final String  str = intent.getStringExtra("Village");vv=str;
         notid=intent.getStringExtra("notid");
         final ImageView image = findViewById(R.id.imageView3);
@@ -111,8 +113,10 @@ public class packages_2 extends AppCompatActivity implements View.OnClickListene
             //Toast.makeText(this, "You can chat with user on chat box", Toast.LENGTH_SHORT).show();
             String id=mdatabase.push().getKey();
             uname="samar";
-            pakage_noti p=new pakage_noti(uname,vv);
-            mdatabase.child("noti").child(id).setValue(p);
+            pakage_noti p=new pakage_noti(uname,vv,notid,uid);
+            mdatabase=FirebaseDatabase.getInstance().getReference("Notify_user").child("noti");
+            mdatabase.child(id).setValue(p);
+            f.child(uid).child(vv).setValue(vv);
             Toast.makeText(this, "You can chat with user on chat box", Toast.LENGTH_SHORT).show();
             finish();
             case R.id.mreject:
