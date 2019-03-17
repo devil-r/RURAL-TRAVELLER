@@ -1,10 +1,13 @@
 package com.example.souhardkataria.ruralt;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.view.Menu;
@@ -34,7 +37,15 @@ public class myAccount_wishlist extends AppCompatActivity {
        adapter = new ArrayAdapter<String>(this,R.layout.listview_textbox,Array);
         ListView listView = this.findViewById(R.id.list_myaccount);
         listView.setAdapter(adapter);
-
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String str=Array.get(position);
+                Intent intent1=new Intent(myAccount_wishlist.this,packages.class);
+                intent1.putExtra("Village",str);
+                startActivity(intent1);
+            }
+        });
 
     }
 
