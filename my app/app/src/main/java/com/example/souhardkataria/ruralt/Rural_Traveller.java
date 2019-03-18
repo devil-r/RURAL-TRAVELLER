@@ -90,11 +90,7 @@ public class Rural_Traveller extends AppCompatActivity /*implements LoaderCallba
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //Asking for permissions Starts from here
-        //Camera and Location and storage
-        if(ContextCompat.checkSelfPermission(Rural_Traveller.this,Manifest.permission.CAMERA)!=PackageManager.PERMISSION_GRANTED||ContextCompat.checkSelfPermission(Rural_Traveller.this,Manifest.permission.ACCESS_COARSE_LOCATION)!=PackageManager.PERMISSION_GRANTED||ContextCompat.checkSelfPermission(Rural_Traveller.this,Manifest.permission.ACCESS_FINE_LOCATION)!=PackageManager.PERMISSION_GRANTED||ContextCompat.checkSelfPermission(Rural_Traveller.this,Manifest.permission.WRITE_EXTERNAL_STORAGE)!=PackageManager.PERMISSION_GRANTED||ContextCompat.checkSelfPermission(Rural_Traveller.this,Manifest.permission.READ_EXTERNAL_STORAGE)!=PackageManager.PERMISSION_GRANTED)
-        ActivityCompat.requestPermissions(Rural_Traveller.this,new String[]{Manifest.permission.CAMERA,Manifest.permission.ACCESS_COARSE_LOCATION,Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.ACCESS_FINE_LOCATION,Manifest.permission.READ_EXTERNAL_STORAGE},1);
-        //Asking for location ended here
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rural__traveller);
         mAuth = FirebaseAuth.getInstance();
