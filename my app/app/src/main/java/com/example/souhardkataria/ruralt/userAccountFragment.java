@@ -27,6 +27,20 @@ public class userAccountFragment extends Fragment {
         // Inflate the layout for this fragment
          View view =inflater.inflate(R.layout.fragment_user_account, container, false);
 
+        Button changepass  = ( Button )view.findViewById(R.id.changepass);
+        changepass.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), change_pass.class);
+                startActivity(i);
+
+            }
+
+
+        });
+
+
          Button logout  = ( Button )view.findViewById(R.id.logout);
         logout.setOnClickListener(new View.OnClickListener() {
 
@@ -42,12 +56,12 @@ public class userAccountFragment extends Fragment {
 
         });
 
-        Button changepass  = ( Button )view.findViewById(R.id.changepass);
-        changepass.setOnClickListener(new View.OnClickListener() {
+        Button details  = ( Button )view.findViewById(R.id.account_details);
+        details.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getActivity(), change_pass.class);
+                Intent i = new Intent(getActivity(), editprofile.class);
                 startActivity(i);
 
             }

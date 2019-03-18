@@ -44,7 +44,7 @@
              />
 
         <TextView
-            android:id="@+id/mVillageview"
+            android:id="@+id/Village"
             android:layout_width="191dp"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -158,7 +158,7 @@
             android:textSize="14sp" />
 
         <ScrollView
-            android:id="@+id/mscroll1"
+            android:id="@+id/scroll"
             android:layout_width="match_parent"
             android:layout_height="142dp"
             android:layout_above="@+id/mBuy"
@@ -174,7 +174,7 @@
             android:textSize="14sp">
 
             <TextView
-                android:id="@+id/mItenary"
+                android:id="@+id/It"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </ScrollView>
@@ -278,7 +278,7 @@
             tools:ignore="VectorDrawableCompat" />
 
         <ImageView
-            android:id="@+id/imageunlike"
+            android:id="@+id/unlike"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignStart="@+id/imageView3"

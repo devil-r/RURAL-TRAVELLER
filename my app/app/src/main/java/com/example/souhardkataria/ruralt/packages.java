@@ -40,15 +40,15 @@ public class packages extends AppCompatActivity {
         val="";
        final String  str = intent.getStringExtra("Village");
        final ImageView image = findViewById(R.id.imageView3);
-        final ImageView unlike = findViewById(R.id.imageunlike);
+        final ImageView unlike = findViewById(R.id.unlike);
         final ImageView stay=findViewById(R.id.stay);
         final ImageView food=findViewById(R.id.food);
         final ImageView network=findViewById(R.id.network);
         final ImageView transport=findViewById(R.id.transport);
        final ImageLoader imgLoader = new ImageLoader(getApplicationContext());
-      final   TextView viln=findViewById(R.id.mVillageview);
+      final   TextView viln=findViewById(R.id.Village);
       final  TextView ratn=findViewById(R.id.mRate);
-       final TextView itenn=findViewById(R.id.mItenary);
+       final TextView itenn=findViewById(R.id.It);
        final TextView durnn=findViewById(R.id.mDuration);
        final ImageView imageView=findViewById(R.id.imageButton1);
        stay.setOnClickListener(new View.OnClickListener() {
