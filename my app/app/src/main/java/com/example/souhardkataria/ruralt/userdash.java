@@ -29,6 +29,7 @@ public class userdash extends AppCompatActivity {
         tabLayout.getTabAt(1).setIcon(R.drawable.ic_explore_black_24dp);
         tabLayout.getTabAt(2).setIcon(R.drawable.ic_notifications_black_24dp);
         tabLayout.getTabAt(3).setIcon(R.drawable.ic_person_black_24dp);
+        tabLayout.getTabAt(4).setIcon(R.drawable.ic_insert_comment_black_24dp);
     }
 }
 

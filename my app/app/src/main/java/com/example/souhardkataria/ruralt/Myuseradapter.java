@@ -22,11 +22,13 @@ public class Myuseradapter extends FragmentStatePagerAdapter {
                 return new userNotificationFragment();
             case 3:
                 return new userAccountFragment();
+            case 4:
+                return new ChatFragment();
         }
         return null;
     }
     @Override
     public int getCount() {
-        return 4;
+        return 5;
     }
 }

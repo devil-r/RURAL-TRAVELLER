@@ -39,7 +39,7 @@ public class ChatActivity extends AppCompatActivity {
     final static int Right = 2;
 
     String User;
-    String Reciever;
+    String Reciever,RecieverID;
     static String ChatRoom = "jjd";
     myRecyclerAdapter adapter;
     static List<Messages> chats = new ArrayList<>();
@@ -53,6 +53,7 @@ public class ChatActivity extends AppCompatActivity {
         Intent intent = getIntent();
         User = intent.getStringExtra("User");
         Reciever = intent.getStringExtra("Reciever");
+        RecieverID = intent.getStringExtra("RecieverId");
         int Num = intent.getIntExtra("Number",0);
 
 
@@ -68,7 +69,10 @@ public class ChatActivity extends AppCompatActivity {
         //adapter = new myRecyclerAdapter(chats,getApplicationContext(),User,Reciever[1]);
         //recyclerView.setAdapter(adapter);
 
-       ChatRoom = "chatroom";
+        if(User.compareTo(RecieverID)>0)
+            ChatRoom = User+RecieverID;
+        else
+            ChatRoom = RecieverID+User;
 
         ReadMessages();
     }
