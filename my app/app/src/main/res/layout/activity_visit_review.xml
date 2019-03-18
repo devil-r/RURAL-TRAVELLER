@@ -30,18 +30,18 @@
 
         <RatingBar
             android:id="@+id/VisitBar"
-            android:layout_width="wrap_content"
+            android:layout_width="235dp"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginStart="95dp"
-            android:layout_marginLeft="95dp"
+            android:layout_marginStart="79dp"
+            android:layout_marginLeft="79dp"
             android:layout_marginTop="509dp"
-            android:layout_marginEnd="76dp"
-            android:layout_marginRight="76dp"
+            android:layout_marginEnd="97dp"
+            android:layout_marginRight="97dp"
             android:numStars="5" />
 
         <TextView

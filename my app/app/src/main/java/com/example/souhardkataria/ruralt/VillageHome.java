@@ -91,11 +91,11 @@ public class VillageHome extends AppCompatActivity {
                 break;
 
             case R.id.ButtonVisit:
-                startActivity(new Intent(this,VisitReview.class));
+                startActivity(new Intent(this,Visitactivity.class));
                 break;
 
             case R.id.how:
-                startActivity(new Intent(this,Visitactivity.class));
+                startActivity(new Intent(this,VisitReview.class));
                 break;
 
         }
