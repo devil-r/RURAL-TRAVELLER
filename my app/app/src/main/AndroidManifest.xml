@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.souhardkataria.ruralt">
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
@@ -29,8 +30,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".my_account_mypackages"></activity>
+        android:theme="@style/Theme.AppCompat.NoActionBar"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".ForumAnswer"></activity>
+        <activity android:name=".my_account_mypackages" />
         <activity android:name=".Faq" />
         <activity android:name=".Forum" />
         <activity android:name=".packages_2" />
@@ -72,7 +75,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SearchPage"
+        <activity
+            android:name=".SearchPage"
             android:label="SearchPage"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
@@ -117,7 +121,6 @@
         <activity
             android:name=".DescriptionActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-
     </application>
 
 </manifest>
