@@ -23,7 +23,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class packages_2 extends AppCompatActivity implements View.OnClickListener {
     private DatabaseReference mdatabase;
-    String val;
+    String val,userId = null;
     String uname="";
     String notid;String vv;String uid;
     DatabaseReference f=FirebaseDatabase.getInstance().getReference("my_packages");
@@ -109,14 +109,38 @@ public class packages_2 extends AppCompatActivity implements View.OnClickListene
     public void onClick(View v) {
         switch (v.getId()){
         case R.id.maccept:
-            mdatabase.child(notid).removeValue();
+          //  mdatabase.child(notid).removeValue();
             //Toast.makeText(this, "You can chat with user on chat box", Toast.LENGTH_SHORT).show();
+
+            mdatabase.child(notid).addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    userId = dataSnapshot.child("uid").getValue(String.class);
+                    String name = dataSnapshot.child("name").getValue().toString();
+                    FirebaseDatabase.getInstance().getReference().child(uid).child("chats").child(userId).setValue(name);
+                    FirebaseDatabase.getInstance().getReference().child(userId).child("chats").child(uid).setValue("samar");
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });
+
             String id=mdatabase.push().getKey();
             uname="samar";
             pakage_noti p=new pakage_noti(uname,vv,notid,uid);
             mdatabase=FirebaseDatabase.getInstance().getReference("Notify_user").child("noti");
             mdatabase.child(id).setValue(p);
+
+
+
+
             f.child(uid).child(vv).setValue(vv);
+
+
+
+
             Toast.makeText(this, "You can chat with user on chat box", Toast.LENGTH_SHORT).show();
             finish();
             case R.id.mreject:

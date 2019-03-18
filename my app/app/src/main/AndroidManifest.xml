@@ -72,6 +72,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".SearchPage"
+            android:label="SearchPage"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".DisplayMessageActivity2"
             android:label="@string/title_activity_display_message2"
@@ -114,6 +117,7 @@
         <activity
             android:name=".DescriptionActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
+
     </application>
 
 </manifest>

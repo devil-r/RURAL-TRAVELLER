@@ -60,7 +60,7 @@ public class ChatFragment extends Fragment {
     String User;
     DatabaseReference reference;
 
-    static ArrayList<String> list = new ArrayList<>();
+    static ArrayList<String[]> list = new ArrayList<>();
 
     static int Opened=0;
 
@@ -83,7 +83,7 @@ public class ChatFragment extends Fragment {
             User = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
         //Retrieving data from database
-       // reference = FirebaseDatabase.getInstance().getReference().child("Users");
+       reference = FirebaseDatabase.getInstance().getReference().child(User).child("chats");
 
         AtStartUp();
       //  UpdateAccount();
@@ -95,23 +95,26 @@ public class ChatFragment extends Fragment {
 
     void AtStartUp()
     {
-       String dd = "wz6im7lvJhaDolygbtcXIjQCq7i2",
-        aashay = "UdVc64SsDybk4eIGHjumBaWB4qo1";
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    list.clear();
+                for(DataSnapshot data: dataSnapshot.getChildren())
+                {
+                    String id = data.getValue().toString();
+                    String name = data.getKey();
 
-       if (list.size()<1)
-       {
-           list.clear();
-           User = "DD";
-           list.add("Aashay");
-           adapter1.notifyDataSetChanged();
-       }
-       else if(User.equals(aashay))
-       {
-           list.clear();
-           User = "Aashay";
-           list.add("DD");
-           adapter1.notifyDataSetChanged();
-    }}
+                    list.add(new String[]{id,name});
+                    adapter1.notifyDataSetChanged();
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+     }
 
 
 
@@ -147,7 +150,7 @@ public class ChatFragment extends Fragment {
             Context context = getContext();
             convertView = ((FragmentActivity) context).getLayoutInflater().inflate(R.layout.chatdesign,parent,false);
             TextView text = convertView.findViewById(R.id.Design_text);
-            text.setText(list.get(position));
+            text.setText(list.get(position)[1]);
             final int i = position;
             text.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -157,7 +160,8 @@ public class ChatFragment extends Fragment {
                     ChatFragment.Opened = 1;
                     Intent intent = new Intent(guidedash.context,ChatActivity.class);
                     intent.putExtra("User",User);
-                    intent.putExtra("Reciever",list.get(i));
+                    intent.putExtra("Reciever",list.get(i)[1]);
+                    intent.putExtra("RecieverId",list.get(i)[0]);
                     intent.putExtra("Number",i);
                     startActivity(intent);
                 }

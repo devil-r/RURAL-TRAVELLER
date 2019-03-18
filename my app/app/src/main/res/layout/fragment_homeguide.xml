@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileGuide">
+    tools:context=".ProfileGuide"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your Village Package"
+        android:textSize="17dp"/>
 
     <!-- TODO: Update blank fragment layout -->
     <android.support.v7.widget.CardView
@@ -16,7 +22,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
-        >
+        android:id="@+id/card">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -24,13 +30,12 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:src="@drawable/default_featured_image"
-                android:scaleType="centerCrop"/>
+                android:src="@drawable/landourlead"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:text="Trekking"/></LinearLayout>
+                android:text="Adventure at landour"/></LinearLayout>
     </android.support.v7.widget.CardView>
 
-</FrameLayout>
+</LinearLayout>

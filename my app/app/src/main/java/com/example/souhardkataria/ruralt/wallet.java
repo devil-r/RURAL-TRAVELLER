@@ -45,7 +45,7 @@ public class wallet extends AppCompatActivity {
                         String y = userInputDialogEditText.getText().toString();
                         int xx = Integer.parseInt(y);
                         x = x+xx;
-                        mybal.setText(x);
+                       mybal.setText(""+x+".00");
                     }
                 });
                 alertDialogBuilderUserInput.setNegativeButton("Cancel",

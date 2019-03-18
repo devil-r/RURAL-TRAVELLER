@@ -1,17 +1,19 @@
 package com.example.souhardkataria.ruralt;
-
 import android.content.Intent;
+import android.os.Build;
 import android.support.annotation.NonNull;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.system.ErrnoException;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -21,7 +23,10 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
+import static android.system.Os.remove;
+
 public class packages extends AppCompatActivity {
+    static int i=0;
     private DatabaseReference mdatabase;
     String val;
     String uname="";
@@ -35,12 +40,41 @@ public class packages extends AppCompatActivity {
         val="";
        final String  str = intent.getStringExtra("Village");
        final ImageView image = findViewById(R.id.imageView3);
+        final ImageView unlike = findViewById(R.id.imageunlike);
+        final ImageView stay=findViewById(R.id.stay);
+        final ImageView food=findViewById(R.id.food);
+        final ImageView network=findViewById(R.id.network);
+        final ImageView transport=findViewById(R.id.transport);
        final ImageLoader imgLoader = new ImageLoader(getApplicationContext());
       final   TextView viln=findViewById(R.id.mVillageview);
       final  TextView ratn=findViewById(R.id.mRate);
        final TextView itenn=findViewById(R.id.mItenary);
        final TextView durnn=findViewById(R.id.mDuration);
        final ImageView imageView=findViewById(R.id.imageButton1);
+       stay.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               Toast.makeText(packages.this, "Includes Hotel/Home Stay", Toast.LENGTH_SHORT).show();
+           }
+       });
+        food.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(packages.this, "Includes Breakfast and Dinner", Toast.LENGTH_SHORT).show();
+            }
+        });
+        transport.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(packages.this, "Includes Inside the Village Transports ", Toast.LENGTH_SHORT).show();
+            }
+        });
+        network.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(packages.this, "We Personally Ensure that You always Stay Connected !", Toast.LENGTH_SHORT).show();
+            }
+        });
         Query query =FirebaseDatabase.getInstance().getReference().child("Packages").child(str).child("Image");
         // Image View to show
        query.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -75,8 +109,13 @@ durnn.setText(Dur);
 
     }
 });
+        {
 
-
+        }
+        if(i%2==0)
+        imageView.setVisibility(View.VISIBLE);
+        else if(i%2==1)
+        unlike.setVisibility(View.VISIBLE);
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
@@ -85,9 +124,26 @@ durnn.setText(Dur);
             String uid =FirebaseAuth.getInstance().getCurrentUser().getUid();
             DatabaseReference ref= FirebaseDatabase.getInstance().getReference();
 ref.child(uid).child("Liked").child(str).setValue(str);
+                imageView.setVisibility(v.INVISIBLE);
+                unlike.setVisibility(v.VISIBLE);
+                i++;
                 Toast.makeText(packages.this,"Package "+ str+" Added to Liked Packages", Toast.LENGTH_SHORT).show();
             }
         });
+        unlike.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+            @Override
+            public void onClick(View v) {
+                imageView.setVisibility(v.VISIBLE);
+                unlike.setVisibility(v.INVISIBLE);
+                String uid =FirebaseAuth.getInstance().getCurrentUser().getUid();
+                DatabaseReference ref= FirebaseDatabase.getInstance().getReference();
+                ref.child(uid).child("Liked").child(str).removeValue();
+                i++;
+                Toast.makeText(packages.this, "Package "+ str+" Removed From Liked Packages", Toast.LENGTH_SHORT).show();
+            }
+        });
+
         // Image url
 
 
@@ -112,7 +168,6 @@ ref.child(uid).child("Liked").child(str).setValue(str);
                 Toast.makeText(packages.this, uname, Toast.LENGTH_SHORT).show();
                 mdatabase.child("noti").child(id).setValue(p);
                 Toast.makeText(packages.this, "Availability Request Sent", Toast.LENGTH_SHORT).show();
-                finish();
             }
         });
         itenn.setMovementMethod(new ScrollingMovementMethod());

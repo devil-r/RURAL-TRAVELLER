@@ -1,6 +1,7 @@
 package com.example.souhardkataria.ruralt;
 
 import android.content.Intent;
+import android.provider.ContactsContract;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -52,7 +53,8 @@ public class myAccount_wishlist extends AppCompatActivity {
     private void GetWishlist() {
 
         final String id = mAuth.getCurrentUser().getUid();
-        FirebaseDatabase.getInstance().getReference().addValueEventListener(new ValueEventListener() {
+        FirebaseDatabase.getInstance().getReference().addValueEventListener(new ValueEventListener()
+        {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 Array.clear();
@@ -81,6 +83,5 @@ public class myAccount_wishlist extends AppCompatActivity {
 
             }
         });
-
     }
 }
