@@ -22,7 +22,6 @@ import java.util.Objects;
 public class Adminlogin extends AppCompatActivity {
 
     EditText email, pass;
-    FirebaseAuth mAuth;
     ProgressBar pb;
 
     ///judt chcking how git works heloo kudoos;
@@ -34,7 +33,6 @@ public class Adminlogin extends AppCompatActivity {
         email = findViewById(R.id.editText4);
         pass = findViewById(R.id.editText2);
         pb = findViewById(R.id.progressBar);
-        mAuth = FirebaseAuth.getInstance();
 //        email.setText("parthdodiya999@gmail.com");
 //        pass.setText("123456");
     }
@@ -91,20 +89,15 @@ public class Adminlogin extends AppCompatActivity {
         }
 
         if (!(eid.isEmpty() || passw.isEmpty())) {
-            mAuth.signInWithEmailAndPassword(eid, passw).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                @Override
-                public void onComplete(@NonNull Task<AuthResult> task) {
-                    if (task.isSuccessful()) {
-                        pb.setVisibility(View.GONE);
-                        Intent in = new Intent(getApplicationContext(), admindash.class);
-                        in.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                        startActivity(in);
-                    } else {
-                        pb.setVisibility(View.GONE);
-                        //Toast.makeText(getApplicationContext(), Objects.requireNonNull(task.getException()).getMessage(), Toast.LENGTH_LONG).show();
-                    }
-                }
-            });
+            if(eid.equals("admin@rt.com")&&passw.equals("admin@2k19"))
+            {
+                pb.setVisibility(View.GONE);
+                Intent in = new Intent(getApplicationContext(), admindash.class);
+                in.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(in);
+            }else {
+                pb.setVisibility(View.GONE);
+            }
         }
     }
 }
