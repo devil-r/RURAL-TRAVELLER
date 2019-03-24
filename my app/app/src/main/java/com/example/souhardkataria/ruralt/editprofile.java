@@ -26,6 +26,7 @@ public class editprofile extends AppCompatActivity {
     String Name,Email,Gender,Dob;
     CircleImageView photo;
     Uri upi;
+    String uid;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +38,8 @@ public class editprofile extends AppCompatActivity {
         dob = findViewById(R.id.Dob);
 
         photo=findViewById(R.id.photo);
-
+        Intent in=getIntent();
+        uid=in.getStringExtra("id");
         photo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -86,9 +88,9 @@ public class editprofile extends AppCompatActivity {
         map.put("Name", Name);
         map.put("Email", Email);
         map.put("Gender", Gender);
-        map.put("Date Of Birth", Dob);
+        map.put("Date_of_Birth", Dob);
 
-        reference.child("Database Akshit").setValue(map);
+        reference.child("Users").child(uid).setValue(map);
 
         Intent i = new Intent(this,Rural_Traveller.class);
         startActivity(i);

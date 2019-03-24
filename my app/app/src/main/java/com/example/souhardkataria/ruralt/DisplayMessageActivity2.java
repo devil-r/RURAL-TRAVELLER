@@ -81,8 +81,9 @@ public class DisplayMessageActivity2 extends AppCompatActivity {
                             Log.d(TAG, "createUserWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
                             Toast.makeText(DisplayMessageActivity2.this, "You have now been registered", Toast.LENGTH_LONG).show();
-
+                            String uid=user.getUid();
                             Intent i=new Intent(DisplayMessageActivity2.this,editprofile.class);
+                            i.putExtra("id",uid);
                             finish();
                             startActivity(i);
 
