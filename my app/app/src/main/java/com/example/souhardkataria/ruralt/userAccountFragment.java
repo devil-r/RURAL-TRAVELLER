@@ -61,7 +61,7 @@ public class userAccountFragment extends Fragment {
 
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getActivity(), editprofile.class);
+                Intent i = new Intent(getActivity(), display_profile.class);
                 startActivity(i);
 
             }
