@@ -28,15 +28,26 @@
                     android:id="@+id/account_details"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginHorizontal="10sp"
+                    android:background="@color/accountList"
                     android:text="account details" />
                 <Button
                     android:id="@+id/wallet"
                     android:layout_width="match_parent"
+
+                    android:layout_marginHorizontal="10sp"
+                    android:layout_marginTop="10sp"
+                    android:background="@color/accountList"
                     android:layout_height="wrap_content"
                     android:text="My Wallet" />
 
                 <Button
                     android:id="@+id/my_packages"
+
+                    android:layout_marginHorizontal="10sp"
+                    android:layout_marginTop="10sp"
+                    android:background="@color/accountList"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="my_packages" />
@@ -44,6 +55,10 @@
                 <Button
                     android:id="@+id/favourites"
                     android:layout_width="match_parent"
+
+                    android:layout_marginHorizontal="10sp"
+                    android:layout_marginTop="10sp"
+                    android:background="@color/accountList"
                     android:layout_height="wrap_content"
                     android:text="Wishlist" />
 
@@ -51,42 +66,71 @@
                     android:id="@+id/faq"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+
+                    android:layout_marginHorizontal="10sp"
+                    android:layout_marginTop="10sp"
+                    android:background="@color/accountList"
                     android:text="FaQ" />
 
                 <Button
                     android:id="@+id/forum"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+
+                    android:layout_marginHorizontal="10sp"
+                    android:layout_marginTop="10sp"
+                    android:background="@color/accountList"
                     android:text="Forum" />
 
                 <Button
                     android:id="@+id/guideRating"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+
+                    android:layout_marginHorizontal="10sp"
+                    android:layout_marginTop="10sp"
+                    android:background="@color/accountList"
                     android:text="Guide Rating" />
 
                 <Button
                     android:id="@+id/changepass"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+
+                    android:layout_marginHorizontal="10sp"
+                    android:layout_marginTop="10sp"
+                    android:background="@color/accountList"
                     android:text="Change Password" />
 
                 <Button
                     android:id="@+id/help"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+
+                    android:layout_marginHorizontal="10sp"
+                    android:layout_marginTop="10sp"
+                    android:background="@color/accountList"
                     android:text="help" />
 
                 <Button
                     android:id="@+id/our_team"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+
+                    android:layout_marginHorizontal="10sp"
+                    android:layout_marginTop="10sp"
+                    android:background="@color/accountList"
                     android:text="our Team" />
 
                 <Button
                     android:id="@+id/logout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10sp"
+                    android:layout_marginTop="10sp"
+
+                    android:layout_marginHorizontal="10sp"
+                    android:background="@color/accountList"
                     android:text="Logout" />
             </LinearLayout>
         </android.support.constraint.ConstraintLayout>
