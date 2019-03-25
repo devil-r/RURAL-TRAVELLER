@@ -10,6 +10,7 @@ import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -92,6 +93,7 @@ public class StayActivity extends AppCompatActivity {
         @Override
         public void onBindViewHolder(@NonNull MyViewHolder viewHolder, int i) {
           viewHolder.view.setText(StayActivity.lst.get(i));
+          viewHolder.img.setImageDrawable(context.getResources().getDrawable(R.drawable.hotel));
         }
 
         @Override
@@ -102,9 +104,11 @@ public class StayActivity extends AppCompatActivity {
         class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
             TextView view;
+            ImageView img ;
             public MyViewHolder(@NonNull View itemView) {
                 super(itemView);
                 view = itemView.findViewById(R.id.Textst);
+                img = itemView.findViewById(R.id.StayImage);
                 view.setOnClickListener(this);
             }
 

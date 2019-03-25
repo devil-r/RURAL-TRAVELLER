@@ -40,7 +40,7 @@ public class VillageHome extends AppCompatActivity {
         PagerAdapt adapt = new PagerAdapt(getSupportFragmentManager());
         viewPager.setAdapter(adapt);
 
-        Button maps  = ( Button )findViewById(R.id.map_button);
+        ImageView maps  = findViewById(R.id.MapButton);
         maps.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -67,37 +67,31 @@ public class VillageHome extends AppCompatActivity {
 
     public void Cicked(View view) {
 
-        switch(view.getId())
-        {
-            case R.id.StayButton:
-                Intent intent = new Intent(this,StayActivity.class);
-                //  intent.putExtra("Village",str);
-                startActivity(intent);
-                break;
-            case R.id.ButtonDecr:
-                //Intent intent1 = new Intent(this,)
-                startActivity(new Intent(this,DescriptionActivity.class));
-                Toast.makeText(this, "Stay", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.ButtonPackage:
-                Intent intent1=new Intent(this,packages.class);
-                intent1.putExtra("Village",str);
-                startActivity(intent1);
-                break;
+        Intent intent;
+       switch (view.getId())
+       {
+           case R.id.StayButton:
+               intent = new Intent(VillageHome.this,StayActivity.class);
+               Toast.makeText(this, "Stay Activity Should Open", Toast.LENGTH_SHORT).show();
+               intent.putExtra("Village",str);
+               startActivity(intent);break;
 
-            case R.id.Eat:
-                Intent i=new Intent(this, Eatactivity.class);
-                startActivity(i);
-                break;
+           case R.id.EatButton:
+               intent = new Intent(VillageHome.this,Eatactivity.class);
+               intent.putExtra("Village",str);
+               startActivity(intent);break;
 
-            case R.id.ButtonVisit:
-                startActivity(new Intent(this,Visitactivity.class));
-                break;
+           case R.id.VisitButton:
+               intent = new Intent(VillageHome.this,Visitactivity.class);
+               intent.putExtra("Village",str);
+               startActivity(intent);break;
 
-            case R.id.how:
-                startActivity(new Intent(this,VisitReview.class));
-                break;
+           case R.id.ButtonPackage:
+               intent = new Intent(VillageHome.this,packages.class);
+               intent.putExtra("Village",str);
+               startActivity(intent);break;
 
-        }
+
+       }
     }
 }

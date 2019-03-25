@@ -6,7 +6,7 @@
         android:topLeftRadius="8sp"
         android:bottomRightRadius="8sp"
         android:bottomLeftRadius="8sp"/>
-    <solid
-        android:color="@color/colorPrimaryDark"/>
-
+    <stroke
+        android:color="#000"
+        android:width="3sp"/>
 </shape>

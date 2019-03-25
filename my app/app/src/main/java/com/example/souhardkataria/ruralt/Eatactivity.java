@@ -11,6 +11,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -102,9 +103,11 @@ public class Eatactivity extends AppCompatActivity {
         class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
             TextView view;
+            ImageView img ;
             public MyViewHolder(@NonNull View itemView) {
                 super(itemView);
                 view = itemView.findViewById(R.id.Textst);
+                img = itemView.findViewById(R.id.StayImage);
                 view.setOnClickListener(this);
             }
 

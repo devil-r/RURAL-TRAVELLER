@@ -22,10 +22,11 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class editprofile extends AppCompatActivity {
 
     private static final int CHOOSE_IMAGE = 101;
-    EditText name,email,gender,dob;
-    String Name,Email,Gender,Dob;
+    EditText name,email,gender,dob,mob,add;
+    String Name,Email,Gender,Dob,Mob,Add;
     CircleImageView photo;
     Uri upi;
+    String uid;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,9 +36,11 @@ public class editprofile extends AppCompatActivity {
         email = findViewById(R.id.Email);
         gender = findViewById(R.id.Gender);
         dob = findViewById(R.id.Dob);
-
+        mob = findViewById(R.id.editText);
+        add = findViewById(R.id.editText2);
         photo=findViewById(R.id.photo);
-
+        Intent in=getIntent();
+        uid=in.getStringExtra("id");
         photo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,13 +85,16 @@ public class editprofile extends AppCompatActivity {
         Email = email.getText().toString();
         Gender = gender.getText().toString();
         Dob = dob.getText().toString();
-
+        Mob = mob.getText().toString();
+        Add = mob.getText().toString();
         map.put("Name", Name);
         map.put("Email", Email);
         map.put("Gender", Gender);
-        map.put("Date Of Birth", Dob);
+        map.put("Date_of_Birth", Dob);
+        map.put("MobileNumber",Mob);
+        map.put("Address",Add);
 
-        reference.child("Database Akshit").setValue(map);
+        reference.child("Users").child(uid).setValue(map);
 
         Intent i = new Intent(this,Rural_Traveller.class);
         startActivity(i);

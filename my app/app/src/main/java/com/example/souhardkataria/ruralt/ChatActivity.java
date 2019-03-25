@@ -100,6 +100,7 @@ public class ChatActivity extends AppCompatActivity {
                     }
                     adapter = new myRecyclerAdapter(chats,getApplicationContext(),User,Reciever,ChatActivity.this);
                     recyclerView.setAdapter(adapter);
+                    recyclerView.scrollToPosition(chats.size()-1);
 
 
                 }

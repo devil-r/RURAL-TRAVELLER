@@ -2,7 +2,6 @@
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="5dp"
     xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -10,7 +9,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/list_style"
     android:layout_marginLeft="2sp"
     android:layout_marginRight="2sp"
     android:padding="5dp">
@@ -30,7 +28,7 @@
         android:layout_height="0sp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="4dp"
-        android:textColor="#858080"
+        android:textColor="#fff"
         android:text="kjadldas"
         android:gravity="center"
         android:textSize="24sp"
@@ -45,7 +43,6 @@
         android:layout_height="30sp"
         android:id="@+id/Design_unread"
         android:textColor="#000"
-        android:text="55"
         android:layout_marginRight="10sp"
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"

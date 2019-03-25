@@ -30,7 +30,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".my_account_mypackages"></activity>
+        <activity android:name=".display_profile"></activity>
+        <activity android:name=".my_account_mypackages" />
         <activity android:name=".Faq" />
         <activity android:name=".Forum" />
         <activity android:name=".packages_2" />
@@ -72,7 +73,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SearchPage"
+        <activity
+            android:name=".SearchPage"
             android:label="SearchPage"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
@@ -117,7 +119,6 @@
         <activity
             android:name=".DescriptionActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-
     </application>
 
 </manifest>
