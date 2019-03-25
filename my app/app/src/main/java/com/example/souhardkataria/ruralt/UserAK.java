@@ -1,7 +1,7 @@
 package com.example.souhardkataria.ruralt;
 
 public class UserAK {
-    String Name,Email,Gender,Date_of_Birth;
+    String Name,Email,Gender,Date_of_Birth,Mob,Add;
 
     public UserAK() {
     }

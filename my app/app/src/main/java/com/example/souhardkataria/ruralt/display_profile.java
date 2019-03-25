@@ -26,6 +26,8 @@ public class display_profile extends AppCompatActivity {
         final EditText email=findViewById(R.id.Email);
         final EditText gender=findViewById(R.id.Gender);
         final EditText dob=findViewById(R.id.Dob);
+        final EditText mob=findViewById(R.id.editText);
+        final EditText add=findViewById(R.id.editText2);
         Button b=(Button) findViewById(R.id.button);
         b.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,6 +45,8 @@ public class display_profile extends AppCompatActivity {
                 email.setText(us.Email);
                 gender.setText(us.Gender);
                 dob.setText(us.Date_of_Birth);
+                mob.setText(us.Mob);
+                add.setText(us.Add);
             }
 
             @Override
