@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -17,12 +18,11 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class TGDataForAdmin extends AppCompatActivity {
-
+    FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tgdata_for_admin);
-
         final TextView name=findViewById(R.id.name);
         final TextView email=findViewById(R.id.email);
         final TextView phone=findViewById(R.id.phone);
@@ -35,6 +35,7 @@ public class TGDataForAdmin extends AppCompatActivity {
         final Button accept,reject;
         accept=findViewById(R.id.acceptTG);
         reject=findViewById(R.id.rejectTG);
+        mAuth=FirebaseAuth.getInstance();
         final FirebaseDatabase database = FirebaseDatabase.getInstance();
         final DatabaseReference myRef = database.getReference("registers");
         Intent in=getIntent();
@@ -52,7 +53,7 @@ public class TGDataForAdmin extends AppCompatActivity {
                     {
                         name.setText(u.name);
                         email.setText(u.email);
-                        phone.setText(u.phno);
+                        phone.setText("7393728492");
                         dob.setText(u.dob);
                         gender.setText(u.gender);
                         village.setText(u.village);
@@ -70,6 +71,7 @@ public class TGDataForAdmin extends AppCompatActivity {
                             @Override
                             public void onClick(View view) {
                                 database.getReference("Guides").child(ids).setValue(u);
+
                                 myRef.child(ids).removeValue();
                                 finish();
                             }

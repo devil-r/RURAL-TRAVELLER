@@ -2,10 +2,11 @@
 <TextView android:layout_height="fill_parent"
     android:layout_width="fill_parent"
     android:id="@+id/label"
-    android:textSize="15sp"
+    android:textSize="17sp"
     android:paddingTop="3sp"
     android:paddingBottom="3sp"
     android:text="hello"
+    android:paddingLeft="10sp"
     android:textAlignment="gravity"
     android:gravity="left"
     xmlns:android="http://schemas.android.com/apk/res/android" />
