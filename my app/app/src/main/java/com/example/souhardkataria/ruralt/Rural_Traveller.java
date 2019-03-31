@@ -46,6 +46,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -78,6 +79,8 @@ public class Rural_Traveller extends AppCompatActivity /*implements LoaderCallba
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rural__traveller);
+        FirebaseApp.initializeApp(this);
+
         mAuth = FirebaseAuth.getInstance();
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);

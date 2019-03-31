@@ -1,14 +1,13 @@
 package com.example.souhardkataria.ruralt;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
-import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -20,7 +19,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
@@ -29,7 +27,7 @@ import java.util.HashMap;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class editprofile extends AppCompatActivity {
+public class EditProfile1 extends AppCompatActivity {
 
     private static final int CHOOSE_IMAGE = 101;
     EditText name,email,gender,dob,mob,add;
@@ -46,13 +44,13 @@ public class editprofile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editprofile);
 
-        name = findViewById(R.id.Name);
-        email = findViewById(R.id.Email);
-        gender = findViewById(R.id.Gender);
+        name = findViewById(R.id.Name2);
+        email = findViewById(R.id.Email2);
+        gender = findViewById(R.id.Gender2);
         dob = findViewById(R.id.Dob);
-        mob = findViewById(R.id.Mob);
-        add = findViewById(R.id.editText2);
-        photo=findViewById(R.id.photo);
+        mob = findViewById(R.id.Mob2);
+        add = findViewById(R.id.Add2);
+        photo=findViewById(R.id.photo1);
         Intent in=getIntent();
         uid=in.getStringExtra("id");
         photo.setOnClickListener(new View.OnClickListener() {
@@ -80,7 +78,7 @@ public class editprofile extends AppCompatActivity {
                             task = taskSnapshot.getStorage().getDownloadUrl();
                             while(!task.isComplete());
                             Url = task.getResult().toString();
-                           // databaseReference.child("image").setValue(Url);
+                            // databaseReference.child("image").setValue(Url);
                         }
                     })
                     .addOnFailureListener(new OnFailureListener() {
@@ -148,7 +146,8 @@ public class editprofile extends AppCompatActivity {
         if(Mob.isEmpty() || Mob.length()!=10){
             mob.setError("This field is required");
         }
-        if(Add.isEmpty() || Add.length()<=10){
+        if(Add.isEmpty() || Add.length()<=0)
+        {
             add.setError("This field is required");
         }
         map.put("Name", Name);
