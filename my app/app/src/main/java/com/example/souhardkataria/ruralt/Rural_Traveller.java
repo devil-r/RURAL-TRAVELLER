@@ -33,6 +33,7 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -71,7 +72,7 @@ public class Rural_Traveller extends AppCompatActivity /*implements LoaderCallba
     private View mProgressView;
     private View mLoginFormView;
     private FirebaseAuth mAuth;
-
+    ProgressBar pb;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -94,7 +95,7 @@ public class Rural_Traveller extends AppCompatActivity /*implements LoaderCallba
             }
         });
 
-
+        pb=findViewById(R.id.login_progress);
         Button forgotpass  = ( Button )findViewById(R.id.button7);
         forgotpass.setOnClickListener(new View.OnClickListener() {
 
@@ -102,7 +103,6 @@ public class Rural_Traveller extends AppCompatActivity /*implements LoaderCallba
             public void onClick(View v) {
                 Intent intent = new Intent(Rural_Traveller.this, DisplayMessageActivity.class);
                 startActivity(intent);
-
             }
 
 
@@ -164,6 +164,7 @@ public class Rural_Traveller extends AppCompatActivity /*implements LoaderCallba
 
 
     private void attemptLogin() {
+        pb.setVisibility(View.VISIBLE);
         if (mAuthTask != null) {
             return;
         }
@@ -261,6 +262,7 @@ public class Rural_Traveller extends AppCompatActivity /*implements LoaderCallba
                     .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
+                            pb.setVisibility(View.GONE);
                             if (task.isSuccessful()) {
                                 // Sign in success, update UI with the signed-in user's information
                                 Log.d(TAG, "signInWithEmail:success");
