@@ -11,8 +11,10 @@ import android.os.Bundle;
 import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -21,6 +23,13 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.zxing.integration.android.IntentIntegrator;
+import com.google.zxing.integration.android.IntentResult;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.Collection;
 
 public class wallet extends AppCompatActivity {
     FloatingActionButton fab;
@@ -29,6 +38,8 @@ public class wallet extends AppCompatActivity {
     wallet_class cc;
     final Context c= this;
     TextView mybal;
+    Button scan;
+    private IntentIntegrator qrscan;
     String uid= FirebaseAuth.getInstance().getCurrentUser().getUid();
     DatabaseReference Wallet=FirebaseDatabase.getInstance().getReference("Wallet");
     @Override
@@ -37,6 +48,8 @@ public class wallet extends AppCompatActivity {
         setContentView(R.layout.activity_wallet);
         fab=findViewById(R.id.fab);
         mybal=findViewById(R.id.check_balance);
+        scan=findViewById(R.id.scan);
+        qrscan=new IntentIntegrator(this);
         Wallet.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -56,6 +69,12 @@ public class wallet extends AppCompatActivity {
    // old=cc.money;
      //   hh=""+old;
        // mybal.setText(hh);
+        scan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                qrscan.initiateScan();
+            }
+        });
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -95,6 +114,34 @@ public class wallet extends AppCompatActivity {
                 alertDialogAndroid.show();
             }
         });
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        IntentResult result;
+        result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+        if (result != null) {
+            //if qrcode has nothing in it
+            if (result.getContents() == null) {
+                Toast.makeText(this, "Result Not Found", Toast.LENGTH_LONG).show();
+            } else {
+                //if qr contains data
+                try {
+                    //converting the data to json
+                    JSONObject obj = new JSONObject(result.getContents());
+                    //setting values to textviews
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    //if control comes here
+                    //that means the encoded format not matches
+                    //in this case you can display whatever data is available on the qrcode
+                    //to a toast
+                    Toast.makeText(this, result.getContents(), Toast.LENGTH_LONG).show();
+                }
+            }
+        } else {
+            super.onActivityResult(requestCode, resultCode, data);
+        }
     }
 
 }
