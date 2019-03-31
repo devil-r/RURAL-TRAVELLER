@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -111,7 +112,7 @@ public class userHomefragment extends Fragment {
             TextView name=view.findViewById(R.id.name1);
             TextView duration=view.findViewById(R.id.duration);
             TextView rate=view.findViewById(R.id.rate);
-            LinearLayout ll=view.findViewById(R.id.ll);
+            CardView ll=view.findViewById(R.id.ll);
             name.setText(array.get(i).name);
             duration.setText(array.get(i).Duration);
             rate.setText("Rs. "+array.get(i).Rate);

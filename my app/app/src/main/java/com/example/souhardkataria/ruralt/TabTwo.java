@@ -49,7 +49,7 @@ public class TabTwo extends Fragment {
                 {
                     Question a=x.getValue(Question.class);
                     questions.add(a);
-                    if(a.answer==null)
+                    if(a.answer==null||a.answer.equals(""))
                     {
                         flag.add(false);
                     }else {

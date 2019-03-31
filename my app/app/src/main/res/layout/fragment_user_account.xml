@@ -30,7 +30,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10sp"
                     android:layout_marginHorizontal="10sp"
-
+                    
                     android:text="account details" />
                 <Button
                     android:id="@+id/wallet"
@@ -38,6 +38,7 @@
 
                     android:layout_marginHorizontal="10sp"
                     android:layout_marginTop="10sp"
+                    
                     android:layout_height="wrap_content"
                     android:text="My Wallet" />
 
@@ -46,6 +47,7 @@
 
                     android:layout_marginHorizontal="10sp"
                     android:layout_marginTop="10sp"
+                    
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="my_packages" />
@@ -56,6 +58,7 @@
 
                     android:layout_marginHorizontal="10sp"
                     android:layout_marginTop="10sp"
+
                     android:layout_height="wrap_content"
                     android:text="Wishlist" />
 
@@ -66,6 +69,7 @@
 
                     android:layout_marginHorizontal="10sp"
                     android:layout_marginTop="10sp"
+
                     android:text="FaQ" />
 
                 <Button
@@ -75,6 +79,7 @@
 
                     android:layout_marginHorizontal="10sp"
                     android:layout_marginTop="10sp"
+                    
                     android:text="Forum" />
 
                 <Button
@@ -84,6 +89,7 @@
 
                     android:layout_marginHorizontal="10sp"
                     android:layout_marginTop="10sp"
+                    
                     android:text="Guide Rating" />
 
                 <Button
@@ -93,6 +99,7 @@
 
                     android:layout_marginHorizontal="10sp"
                     android:layout_marginTop="10sp"
+                    
                     android:text="Change Password" />
 
                 <Button
@@ -102,6 +109,7 @@
 
                     android:layout_marginHorizontal="10sp"
                     android:layout_marginTop="10sp"
+                    
                     android:text="help" />
 
                 <Button
@@ -111,6 +119,7 @@
 
                     android:layout_marginHorizontal="10sp"
                     android:layout_marginTop="10sp"
+                    
                     android:text="our Team" />
 
                 <Button
@@ -121,6 +130,7 @@
                     android:layout_marginTop="10sp"
 
                     android:layout_marginHorizontal="10sp"
+                    
                     android:text="Logout" />
             </LinearLayout>
         </android.support.constraint.ConstraintLayout>

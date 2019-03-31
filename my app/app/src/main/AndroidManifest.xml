@@ -30,8 +30,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".EditProfile1"></activity>
-        <activity android:name=".display_profile" />
+        <activity android:name=".display_profile"></activity>
         <activity android:name=".my_account_mypackages" />
         <activity android:name=".Faq" />
         <activity android:name=".Forum" />

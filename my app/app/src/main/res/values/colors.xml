@@ -5,4 +5,5 @@
     <color name="colorAccent">#2DA6D3</color>
     <color name="answered">#4ef442</color>
     <color name="unanswered">#f44e41</color>
+    <color name="accountList">#80006699</color>
 </resources>

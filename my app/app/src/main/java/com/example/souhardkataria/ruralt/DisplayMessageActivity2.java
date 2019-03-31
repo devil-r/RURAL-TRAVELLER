@@ -17,6 +17,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -33,6 +35,9 @@ public class DisplayMessageActivity2 extends AppCompatActivity {
     @InjectView(R.id.input_password) EditText _passwordText;
     @InjectView(R.id.btn_signup) Button _signupButton;
     @InjectView(R.id.link_login) TextView _loginLink;
+    DatabaseReference wallet=FirebaseDatabase.getInstance().getReference("Wallet");
+
+
     private FirebaseAuth mAuth;
     //private DatabaseReference mdata;
 
@@ -80,8 +85,10 @@ public class DisplayMessageActivity2 extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "createUserWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
+
                             Toast.makeText(DisplayMessageActivity2.this, "You have now been registered", Toast.LENGTH_LONG).show();
                             String uid=user.getUid();
+                            wallet.child(uid).setValue(new wallet_class(2000.00));
                             Intent i=new Intent(DisplayMessageActivity2.this,editprofile.class);
                             i.putExtra("id",uid);
                             finish();
