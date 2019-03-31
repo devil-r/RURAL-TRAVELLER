@@ -9,7 +9,12 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.SuccessContinuation;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -70,10 +75,21 @@ public class TGDataForAdmin extends AppCompatActivity {
                         accept.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
-                                database.getReference("Guides").child(ids).setValue(u);
-
-                                myRef.child(ids).removeValue();
-                                finish();
+                                mAuth.createUserWithEmailAndPassword(u.email, u.pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<AuthResult> task) {
+                                        if(task.isSuccessful())
+                                        {
+                                            String idm=mAuth.getUid();
+                                            mAuth.getCurrentUser().sendEmailVerification();
+                                            database.getReference("Guides").child(idm).setValue(u);
+                                            myRef.child(ids).removeValue();
+                                            finish();
+                                        }else {
+                                            Toast.makeText(getApplicationContext(),task.getException().getMessage(),Toast.LENGTH_LONG).show();
+                                        }
+                                    }
+                                });
                             }
                         });
 
