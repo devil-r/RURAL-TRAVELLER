@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#069"
+    android:background="@drawable/dark"
     tools:context=".SearchPage">
 
     <TextView
@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:textColor="#047"
         android:text="Custom Search For Villages"
         android:textAlignment="gravity"
         android:textSize="20sp"
@@ -42,6 +43,7 @@
             android:layout_marginRight="15dp"
             android:layout_weight="0.5"
             android:ems="10"
+            android:textColor="#047"
             android:hint="Enter village name"
             android:inputType="textPersonName" />
 
@@ -77,6 +79,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="10dp"
+        android:textColor="#047"
         android:layout_marginRight="10dp"
         android:text="TextView"
         android:textSize="12dp"
