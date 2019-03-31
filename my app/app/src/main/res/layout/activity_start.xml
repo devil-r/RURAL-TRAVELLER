@@ -26,6 +26,7 @@
             android:layout_marginRight="144dp"
             android:layout_marginBottom="64dp"
             android:text="Travel Guide?"
+            android:textColor="#fff"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -44,6 +45,7 @@
             android:fontFamily="sans-serif-condensed"
             android:text="We travel not to escape life
 But for life not to escape us"
+            android:textColor="#fff"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="30dp"
             android:textStyle="italic"
