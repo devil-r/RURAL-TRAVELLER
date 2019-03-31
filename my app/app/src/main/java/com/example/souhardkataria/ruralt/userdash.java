@@ -34,7 +34,7 @@ public class userdash extends AppCompatActivity {
 
     }
     public void onBackPressed() {
-        //do nothing
+        //disabling
     }
 }
 
