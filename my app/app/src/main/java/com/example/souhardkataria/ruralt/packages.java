@@ -51,7 +51,29 @@ public class packages extends AppCompatActivity {
        final TextView itenn=findViewById(R.id.It);
        final TextView durnn=findViewById(R.id.mDuration);
        final ImageView imageView=findViewById(R.id.imageButton1);
-       stay.setOnClickListener(new View.OnClickListener() {
+        unlike.setVisibility(View.INVISIBLE);
+        imageView.setVisibility(View.INVISIBLE);
+        String uid =FirebaseAuth.getInstance().getCurrentUser().getUid();
+        DatabaseReference ref= FirebaseDatabase.getInstance().getReference().child(uid).child("Liked").child(str);
+        ref.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+             if(dataSnapshot.exists())
+             {
+                 unlike.setVisibility(View.VISIBLE);
+
+             }
+             else
+                 imageView.setVisibility(View.VISIBLE);
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+                   stay.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
                Toast.makeText(packages.this, "Includes Hotel/Home Stay", Toast.LENGTH_SHORT).show();
@@ -112,10 +134,8 @@ durnn.setText(Dur);
         {
 
         }
-        if(i%2==0)
-        imageView.setVisibility(View.VISIBLE);
-        else if(i%2==1)
-        unlike.setVisibility(View.VISIBLE);
+
+
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
