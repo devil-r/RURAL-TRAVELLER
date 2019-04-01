@@ -21,7 +21,6 @@ public class grate extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grate);
-        Intent intent = getIntent();
         mRatingbar=findViewById(R.id.ratingBar);
         GuideName=getIntent().getExtras().get("guide").toString();
         votes= Integer.parseInt(getIntent().getExtras().get("votes").toString());

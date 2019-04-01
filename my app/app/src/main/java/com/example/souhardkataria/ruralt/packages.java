@@ -35,22 +35,22 @@ public class packages extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_packages);
         Button b=(Button) findViewById(R.id.mBuy);
-       final int loader = R.drawable.loader;
+        final int loader = R.drawable.loader;
         Intent intent = getIntent();
         val="";
-       final String  str = intent.getStringExtra("Village");
-       final ImageView image = findViewById(R.id.imageView3);
+        final String  str = intent.getStringExtra("Village");
+        final ImageView image = findViewById(R.id.imageView3);
         final ImageView unlike = findViewById(R.id.unlike);
         final ImageView stay=findViewById(R.id.stay);
         final ImageView food=findViewById(R.id.food);
         final ImageView network=findViewById(R.id.network);
         final ImageView transport=findViewById(R.id.transport);
-       final ImageLoader imgLoader = new ImageLoader(getApplicationContext());
-      final   TextView viln=findViewById(R.id.Village);
-      final  TextView ratn=findViewById(R.id.mRate);
-       final TextView itenn=findViewById(R.id.It);
-       final TextView durnn=findViewById(R.id.mDuration);
-       final ImageView imageView=findViewById(R.id.imageButton1);
+        final ImageLoader imgLoader = new ImageLoader(getApplicationContext());
+        final   TextView viln=findViewById(R.id.Village);
+        final  TextView ratn=findViewById(R.id.mRate);
+        final TextView itenn=findViewById(R.id.It);
+        final TextView durnn=findViewById(R.id.mDuration);
+        final ImageView imageView=findViewById(R.id.imageButton1);
         unlike.setVisibility(View.INVISIBLE);
         imageView.setVisibility(View.INVISIBLE);
         String uid =FirebaseAuth.getInstance().getCurrentUser().getUid();
@@ -58,13 +58,13 @@ public class packages extends AppCompatActivity {
         ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-             if(dataSnapshot.exists())
-             {
-                 unlike.setVisibility(View.VISIBLE);
+                if(dataSnapshot.exists())
+                {
+                    unlike.setVisibility(View.VISIBLE);
 
-             }
-             else
-                 imageView.setVisibility(View.VISIBLE);
+                }
+                else
+                    imageView.setVisibility(View.VISIBLE);
 
             }
 
@@ -73,12 +73,12 @@ public class packages extends AppCompatActivity {
 
             }
         });
-                   stay.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
-               Toast.makeText(packages.this, "Includes Hotel/Home Stay", Toast.LENGTH_SHORT).show();
-           }
-       });
+        stay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(packages.this, "Includes Hotel/Home Stay", Toast.LENGTH_SHORT).show();
+            }
+        });
         food.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -99,38 +99,38 @@ public class packages extends AppCompatActivity {
         });
         Query query =FirebaseDatabase.getInstance().getReference().child("Packages").child(str).child("Image");
         // Image View to show
-       query.addListenerForSingleValueEvent(new ValueEventListener() {
-           @Override
-           public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                   val=dataSnapshot.getValue(String.class);
-               imgLoader.DisplayImage(val, loader, image);
-           }
+        query.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                val=dataSnapshot.getValue(String.class);
+                imgLoader.DisplayImage(val, loader, image);
+            }
 
-           @Override
-           public void onCancelled(@NonNull DatabaseError databaseError) {
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
 
-           }
-       });
-       Query query1=FirebaseDatabase.getInstance().getReference().child("Packages").child(str);
-query1.addListenerForSingleValueEvent(new ValueEventListener() {
-    @Override
-    public void onDataChange(@NonNull DataSnapshot dataSnapshot)
-    {
-    String rate,Dur,Itenary;
-    rate=dataSnapshot.child("Rate").getValue(String.class);
-    Dur=dataSnapshot.child("Duration").getValue(String.class);
-    Itenary=dataSnapshot.child("Overview").getValue(String.class);
-viln.setText(str);
-ratn.setText(rate);
-itenn.setText(Itenary);
-durnn.setText(Dur);
-    }
+            }
+        });
+        Query query1=FirebaseDatabase.getInstance().getReference().child("Packages").child(str);
+        query1.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot)
+            {
+                String rate,Dur,Itenary;
+                rate=dataSnapshot.child("Rate").getValue(String.class);
+                Dur=dataSnapshot.child("Duration").getValue(String.class);
+                Itenary=dataSnapshot.child("Overview").getValue(String.class);
+                viln.setText(str);
+                ratn.setText(rate);
+                itenn.setText(Itenary);
+                durnn.setText(Dur);
+            }
 
-    @Override
-    public void onCancelled(@NonNull DatabaseError databaseError) {
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
 
-    }
-});
+            }
+        });
         {
 
         }
@@ -141,9 +141,9 @@ durnn.setText(Dur);
             public void onClick(View v)
             {
 //            String uid= FirebaseAuth.getInstance().getUid();
-            String uid =FirebaseAuth.getInstance().getCurrentUser().getUid();
-            DatabaseReference ref= FirebaseDatabase.getInstance().getReference();
-ref.child(uid).child("Liked").child(str).setValue(str);
+                String uid =FirebaseAuth.getInstance().getCurrentUser().getUid();
+                DatabaseReference ref= FirebaseDatabase.getInstance().getReference();
+                ref.child(uid).child("Liked").child(str).setValue(str);
                 imageView.setVisibility(v.INVISIBLE);
                 unlike.setVisibility(v.VISIBLE);
                 i++;
@@ -174,7 +174,7 @@ ref.child(uid).child("Liked").child(str).setValue(str);
         // url - image url to load
         // loader - loader image, will be displayed before getting image
         // image - ImageView
-       // val="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXjL7j3u_FL6TXAxN7B74JIaY9Qw3IMOfkQ3csGkr57blceF3M3A";
+        // val="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXjL7j3u_FL6TXAxN7B74JIaY9Qw3IMOfkQ3csGkr57blceF3M3A";
 
 
         mdatabase= FirebaseDatabase.getInstance().getReference("Notify_guide");
