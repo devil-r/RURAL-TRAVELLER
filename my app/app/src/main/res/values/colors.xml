@@ -3,7 +3,8 @@
     <color name="colorPrimary">#08b</color>
     <color name="colorPrimaryDark">#036F99</color>
     <color name="colorAccent">#2DA6D3</color>
-    <color name="answered">#4ef442</color>
-    <color name="unanswered">#f44e41</color>
+    <color name="answered">#4ea442</color>
+    <color name="unanswered">#a44e41</color>
     <color name="accountList">#80006699</color>
+    <color name="tg">#047</color>
 </resources>

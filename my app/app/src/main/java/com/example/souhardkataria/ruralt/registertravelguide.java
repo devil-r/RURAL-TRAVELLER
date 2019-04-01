@@ -25,6 +25,8 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.math.BigInteger;
 import java.util.Calendar;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class registertravelguide extends AppCompatActivity {
     private static final String Tag = "register";
@@ -32,10 +34,10 @@ public class registertravelguide extends AppCompatActivity {
     private String gender;
     private EditText about;
     private String  ph,yrs;
-    private String dd;
+    private String dd,pp;
     Spinner spinner;
     private DatePickerDialog.OnDateSetListener mDateSetListener;
-    EditText name,email,phno,ab,ad,y;
+    EditText name,email,phno,ab,ad,y,pass;
     private DatabaseReference mdatabase;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,13 +51,14 @@ public class registertravelguide extends AppCompatActivity {
         ad=(EditText) findViewById(R.id.address);
         ph=phno.getText().toString();
         y=(EditText) findViewById(R.id.yrs);
+        pass=findViewById(R.id.pass);
 
         Button submit=(Button) findViewById(R.id.register);
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String id=mdatabase.push().getKey();
-                com.example.souhardkataria.ruralt.register_users u=new com.example.souhardkataria.ruralt.register_users(name.getText().toString(),email.getText().toString(),ph,dd,gender,spinner.getSelectedItem().toString(),
+                com.example.souhardkataria.ruralt.register_users u=new com.example.souhardkataria.ruralt.register_users( pass.getText().toString(),name.getText().toString(),email.getText().toString(),ph,dd,gender,spinner.getSelectedItem().toString(),
                         ad.getText().toString(),ab.getText().toString(),y.getText().toString(),id);
                 int flag=0;
                 String ee=email.getText().toString();
@@ -82,6 +85,18 @@ public class registertravelguide extends AppCompatActivity {
                     flag=1;
                     ad.setError("enter your address");
                     ad.requestFocus();
+                }
+                //Pattern p = Pattern.compile("[0-9]");
+                //Matcher m = p.matcher(pp);
+                //boolean x = m.find();
+                //boolean ded = (pp.length() > 4);
+
+                //boolean z = x && ded;
+                if ( pass.getText().toString().isEmpty()) {
+                    pass.setError("Please enter password!");
+                    flag=1;
+                } else {
+                    pass.setError(null);
                 }
                 if(y.getText().toString().isEmpty())
                 {

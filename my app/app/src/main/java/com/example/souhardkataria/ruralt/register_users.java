@@ -14,13 +14,15 @@ public class register_users  implements Serializable {
     String about;
     String yre;
     String id;
+    String pass;
     public register_users()
     {
 
     }
-    public register_users(String name,String email,String phno,String dob,String gender,String village,String address,String about,
+    public register_users(String pass,String name,String email,String phno,String dob,String gender,String village,String address,String about,
                           String yre,String id)
     {
+        this.pass=pass;
         this.name=name;
         this.email=email;
         this.phno=phno;

@@ -13,7 +13,7 @@
         android:layout_marginLeft="5sp"
         android:paddingTop="5sp"
         android:paddingBottom="5sp"
-
+        android:paddingLeft="10sp"
         android:text="approve or disapprove travel guide request"
         android:textSize="12sp" />
 
