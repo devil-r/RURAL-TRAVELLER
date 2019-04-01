@@ -1,4 +1,5 @@
 package com.example.souhardkataria.ruralt;
+//Akshit Patel start
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -171,8 +172,8 @@ public class editprofile2 extends AppCompatActivity {
         map.put("Name", Name);
         map.put("Email", Email);
         map.put("Gender", Gender);
-        map.put("Date_of_Birth", Dob);
-        map.put("MobileNumber",Mob);
+        map.put("Date_of_Birth", Dob);   // Akash
+        map.put("MobileNumber",Mob);    // Akash
         map.put("Address",Add);
         map.put("image",Url);
         String user = FirebaseAuth.getInstance().getUid();
@@ -184,3 +185,4 @@ public class editprofile2 extends AppCompatActivity {
         }
     }
 }
+//Akshit Patel end

@@ -23,6 +23,7 @@ public class display_profile extends AppCompatActivity {
 
     String url;
     UserAK us;
+    //Akshit Patel start
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,8 +66,8 @@ public class display_profile extends AppCompatActivity {
                 name.setText(us.Name);
                 email.setText(us.Email);
                 gender.setText(us.Gender);
-                dob.setText(us.Date_of_Birth);
-                mob.setText(us.MobileNumber);
+                dob.setText(us.Date_of_Birth); // Akash
+                mob.setText(us.MobileNumber);  // Akash
                 add.setText(us.Address);
                 url = us.image;
                 Glide.with(getApplicationContext()).load(url).into(image);
@@ -79,3 +80,4 @@ public class display_profile extends AppCompatActivity {
         });
     }
 }
+//Akshit Patel end

@@ -1,5 +1,5 @@
 package com.example.souhardkataria.ruralt;
-
+    //Akshit Patel start
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -168,3 +168,4 @@ public class editprofile extends AppCompatActivity {
         }
     }
 }
+//    //Akshit Patel end
