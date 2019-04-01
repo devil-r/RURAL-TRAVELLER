@@ -128,6 +128,10 @@ public class VillageHome extends AppCompatActivity {
                 intent = new Intent(VillageHome.this,packages.class);
                 intent.putExtra("Village",str);
                 startActivity(intent);break;
+            case R.id.Star:
+                intent = new Intent(VillageHome.this,VisitReview.class);
+                intent.putExtra("Village",str);
+                startActivity(intent);break;
 
 
         }

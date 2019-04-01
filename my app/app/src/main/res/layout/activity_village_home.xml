@@ -46,6 +46,20 @@
             app:layout_constraintTop_toTopOf="parent"
             android:background="#08b"
             />
+
+        <ImageView
+            android:id="@+id/Star"
+            android:layout_width="48sp"
+            android:layout_height="48sp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/ic_star_black_24dp"
+            android:onClick="Cicked"
+            app:layout_constraintEnd_toStartOf="@+id/ButtonPackage"
+            app:layout_constraintHorizontal_bias="0.996"
+            app:layout_constraintStart_toStartOf="@+id/Title"
+            app:layout_constraintTop_toTopOf="parent" />
         <TextView
             android:id="@+id/Title"
             android:layout_width="wrap_content"
