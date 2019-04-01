@@ -6,8 +6,9 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/bc"
-    android:fitsSystemWindows="true">
+    android:background="@drawable/rural2"
+    android:fitsSystemWindows="true"
+    android:id="@+id/sv">
 
     <LinearLayout
         android:orientation="vertical"

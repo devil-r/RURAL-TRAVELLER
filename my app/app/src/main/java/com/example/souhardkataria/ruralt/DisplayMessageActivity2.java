@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -48,6 +49,8 @@ public class DisplayMessageActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_display_message2);
         ButterKnife.inject(this);
+        ScrollView SV=findViewById(R.id.sv);
+        SV.getBackground().setAlpha(120);
         mAuth = FirebaseAuth.getInstance();
         _signupButton.setOnClickListener(new View.OnClickListener() {
             @Override
