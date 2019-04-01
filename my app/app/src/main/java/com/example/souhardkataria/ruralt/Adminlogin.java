@@ -32,8 +32,12 @@ public class Adminlogin extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adminlogin);
+
+        //Souhard Kataria (17CO147) --- Start
         ConstraintLayout cc=findViewById(R.id.admin);
         cc.getBackground().setAlpha(120);
+        //Souhard Kataria (17CO147) --- end
+
         email = findViewById(R.id.editText4);
         pass = findViewById(R.id.editText2);
         pb = findViewById(R.id.progressBar);

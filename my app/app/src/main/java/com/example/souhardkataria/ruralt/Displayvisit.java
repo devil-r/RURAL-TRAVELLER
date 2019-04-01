@@ -1,5 +1,7 @@
 package com.example.souhardkataria.ruralt;
 
+//Souhard Kataria (17CO147) --- Start
+
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -27,9 +29,11 @@ public class Displayvisit extends AppCompatActivity {
         Visit stay = (Visit) intent.getSerializableExtra("Obj");
 
         Title.setText(stay.Name.toUpperCase());
-        Contact.setText(String.valueOf(stay.Distance_Village));
+        Contact.setText(String.valueOf(stay.Distance_Village)+ " from the Village");
         Address.setText(stay.Location);
         ratingBar.setRating(stay.User_Rating);
 
     }
 }
+
+//Souhard Kataria (17CO147) --- end

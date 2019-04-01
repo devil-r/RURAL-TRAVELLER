@@ -1,5 +1,7 @@
 package com.example.souhardkataria.ruralt;
 
+// Souhard Kataria (17CO147) --- start
+
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -121,3 +123,5 @@ public class change_pass extends AppCompatActivity {
         resetpass.setEnabled(true);
     }
 }
+
+// Souhard Kataria (17CO147) --- end

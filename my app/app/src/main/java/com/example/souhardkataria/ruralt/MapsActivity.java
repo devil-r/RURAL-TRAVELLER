@@ -1,5 +1,7 @@
 package com.example.souhardkataria.ruralt;
 
+//Souhard Kataria (17CO147) --- Start
+
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 
@@ -35,3 +37,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.moveCamera(CameraUpdateFactory.newLatLng(landour));
     }
 }
+
+
+//Souhard Kataria (17CO147) --- end

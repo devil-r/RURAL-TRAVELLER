@@ -1,5 +1,8 @@
 package com.example.souhardkataria.ruralt;
 
+
+//Souhard Kataria (17CO147) --- Start
+
 import android.Manifest;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -328,3 +331,4 @@ public class Rural_Traveller extends AppCompatActivity /*implements LoaderCallba
     }
 }
 
+//Souhard Kataria (17CO147) --- end

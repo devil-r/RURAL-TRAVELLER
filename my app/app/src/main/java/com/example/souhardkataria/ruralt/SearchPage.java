@@ -148,7 +148,7 @@ public class SearchPage extends AppCompatActivity {
         }
 
         @Override
-        public View getView(int i, View view, ViewGroup viewGroup) {
+        public View getView(final int i, View view, ViewGroup viewGroup) {
             Context context=getApplicationContext();
             view = getLayoutInflater().inflate(R.layout.village_list_element,viewGroup,false);
             TextView vil=view.findViewById(R.id.villageBox);
@@ -160,6 +160,7 @@ public class SearchPage extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     Intent in=new Intent(getApplicationContext(),VillageHome.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    in.putExtra("Village",ADPids.get(i));
                     startActivity(in);
                 }
             });

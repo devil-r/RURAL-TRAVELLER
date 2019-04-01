@@ -278,9 +278,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#333"
+            android:background="@drawable/user_account_button"
             android:layout_marginRight="2sp"
             android:layout_marginLeft="2sp"
+            android:textColor="#047"
             android:text="Accept" />
 
         <Button
@@ -289,8 +290,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginLeft="2sp"
+            android:textColor="#047"
             android:layout_marginRight="2sp"
-            android:background="#333"
+            android:background="@drawable/user_account_button"
             android:text="Reject" />
     </LinearLayout>
 

@@ -19,7 +19,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="5dp"
-        android:background="#20000000"
+        android:background="#1f6bcdfd"
         android:orientation="horizontal">
 
         <TextView
@@ -28,6 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
+            android:textColor="#047"
             android:text="TOP VISITED VILLAGES" />
 
         <ImageButton
@@ -53,6 +54,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#6bcdfd"
             android:orientation="vertical">
             <ImageView
                 android:layout_width="match_parent"
@@ -79,6 +81,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#6bcdfd"
             android:orientation="vertical">
             <ImageView
                 android:layout_width="match_parent"
@@ -104,6 +107,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#6bcdfd"
             android:orientation="vertical"
             >
             <ImageView

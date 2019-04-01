@@ -1,5 +1,8 @@
 package com.example.souhardkataria.ruralt;
 
+//Souhard Kataria (17CO147) --- Start
+
+//User Sign Up
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -176,7 +179,7 @@ public class DisplayMessageActivity2 extends AppCompatActivity {
 
 }
 
-
+// Souhard Kataria (17CO147) --- End
 
 
 

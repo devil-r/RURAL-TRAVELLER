@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -30,10 +32,12 @@ public class BlankFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_blank, container, false);
 
         int img = getArguments().getInt("Image");
+        String url = getArguments().getString("Url");
         ImageView imageView = (ImageView)view;
         Bitmap bitmap = BitmapFactory.decodeResource(getResources(),img);
         imageView.setImageBitmap(bitmap);
         imageView.setAdjustViewBounds(true);
+        Glide.with(getContext()).load(url).into(imageView);
         return view;
     }
 
