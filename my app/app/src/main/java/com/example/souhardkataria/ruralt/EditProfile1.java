@@ -44,12 +44,12 @@ public class EditProfile1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editprofile);
 
-        name = findViewById(R.id.Name2);
-        email = findViewById(R.id.Email2);
-        gender = findViewById(R.id.Gender2);
+        name = findViewById(R.id.Name);
+        email = findViewById(R.id.Email);
+        gender = findViewById(R.id.Gender);
         dob = findViewById(R.id.Dob);
-        mob = findViewById(R.id.Mob2);
-        add = findViewById(R.id.Add2);
+        mob = findViewById(R.id.Mob);
+        add = findViewById(R.id.Add);
         photo=findViewById(R.id.photo1);
         Intent in=getIntent();
         uid=in.getStringExtra("id");

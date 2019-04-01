@@ -1,14 +1,13 @@
 package com.example.souhardkataria.ruralt;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
-import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -20,7 +19,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
@@ -29,7 +27,7 @@ import java.util.HashMap;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class editprofile extends AppCompatActivity {
+public class editprofile2 extends AppCompatActivity {
 
     private static final int CHOOSE_IMAGE = 101;
     EditText name,email,gender,dob,mob,add;
@@ -80,7 +78,7 @@ public class editprofile extends AppCompatActivity {
                             task = taskSnapshot.getStorage().getDownloadUrl();
                             while(!task.isComplete());
                             Url = task.getResult().toString();
-                           // databaseReference.child("image").setValue(Url);
+                            // databaseReference.child("image").setValue(Url);
                         }
                     })
                     .addOnFailureListener(new OnFailureListener() {
@@ -162,7 +160,7 @@ public class editprofile extends AppCompatActivity {
 
         reference.child("Users").child(user).setValue(map);
         if(!Name.isEmpty() && !Email.isEmpty() && !Gender.isEmpty() && !Dob.isEmpty() && !Mob.isEmpty() && !Add.isEmpty() && android.util.Patterns.EMAIL_ADDRESS.matcher(Email).matches() && Mob.length()==10) {
-            Intent i = new Intent(this, Rural_Traveller.class);
+            Intent i = new Intent(this, display_profile.class);
             startActivity(i);
         }
     }
