@@ -5,7 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ddd"
+
+    android:background="@drawable/rural2"
+
     tools:context=".Adminlogin">
 
     <ProgressBar
@@ -38,6 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="40dp"
+        android:background="@drawable/custom_s_border"
         android:layout_marginEnd="10dp"
         android:gravity="center"
         android:orientation="vertical"
@@ -52,7 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="5sp"
             android:text="email"
-            android:textColor="@color/tg"
+            android:textColor="#fff"
             android:textSize="15sp" />
 
         <EditText
@@ -60,14 +63,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/tg"
-            android:paddingVertical="5sp"
-            android:background="#1f00aacc"
             android:inputType="textEmailAddress" />
 
         <TextView
             android:id="@+id/textView17"
             android:layout_width="match_parent"
-            android:textColor="@color/tg"
+            android:textColor="#fff"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5sp"
             android:layout_marginTop="40sp"
@@ -79,8 +80,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:paddingVertical="5sp"
-            android:background="#1f00aacc"
             android:textColor="@color/tg"
             android:inputType="textPassword" />
 
@@ -89,11 +88,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50sp"
-            android:background="@drawable/user_account_button"
             android:onClick="login"
 
-            android:textColor="@color/tg"
+            android:background="@drawable/shit"
             android:text="Login" />
+
+
 
     </LinearLayout>
 

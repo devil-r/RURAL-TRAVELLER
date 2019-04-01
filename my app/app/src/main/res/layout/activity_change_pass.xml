@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".change_pass"
-    android:background="@drawable/dark">
+   android:background="#fff">
 
 
     <ImageView
@@ -38,6 +38,8 @@
         android:hint="Enter old password"
         android:inputType="textPassword"
         android:maxLines="1"
+        android:textColor="#000"
+        android:textColorHint="#000"
         app:layout_constraintBottom_toTopOf="@+id/new_pass"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,6 +60,8 @@
         android:hint="Enter new password"
         android:inputType="textPassword"
         android:maxLines="1"
+        android:textColorHint="#000"
+        android:textColor="#000"
         app:layout_constraintBottom_toTopOf="@+id/reset_pass"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
