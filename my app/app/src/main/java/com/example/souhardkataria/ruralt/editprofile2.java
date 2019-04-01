@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -44,6 +45,15 @@ public class editprofile2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editprofile);
 
+        String name1 = getIntent().getStringExtra("name");
+        String email1 = getIntent().getStringExtra("email");
+        String gender1 = getIntent().getStringExtra("Gender");
+        String dob1 = getIntent().getStringExtra("Dob");
+        String mob1 = getIntent().getStringExtra("Mob");
+        String add1 = getIntent().getStringExtra("Add");
+        String url1 = getIntent().getStringExtra("image");
+
+
         name = findViewById(R.id.Name);
         email = findViewById(R.id.Email);
         gender = findViewById(R.id.Gender);
@@ -63,6 +73,15 @@ public class editprofile2 extends AppCompatActivity {
         storageReference = FirebaseStorage.getInstance().getReference();
         String user = FirebaseAuth.getInstance().getUid();
         databaseReference = FirebaseDatabase.getInstance().getReference().child(user);
+        name.setText(name1);
+        email.setText(email1);
+        gender.setText(gender1);
+        dob.setText(dob1);
+        mob.setText(mob1);
+        add.setText(add1);
+        Glide.with(getApplicationContext()).load(url1).into(photo);
+
+
     }
     private void uploadFile(){
         if(upi!=null) {
