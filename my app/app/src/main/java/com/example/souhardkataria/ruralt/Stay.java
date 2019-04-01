@@ -1,6 +1,8 @@
 package com.example.souhardkataria.ruralt;
 import java.io.Serializable;
 
+// Avdhesh (17CO210) -- start
+
 public class Stay implements Serializable {
 
 

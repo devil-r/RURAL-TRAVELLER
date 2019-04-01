@@ -263,23 +263,6 @@
             tools:ignore="VectorDrawableCompat" />
 
         <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="66dp"
-            android:layout_height="62dp"
-            android:layout_alignEnd="@+id/textView3"
-            android:layout_alignRight="@+id/textView3"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="29dp"
-            android:layout_marginLeft="29dp"
-            android:layout_marginEnd="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginBottom="0dp"
-            android:layout_toEndOf="@+id/mBuy"
-            android:layout_toRightOf="@+id/mBuy"
-            app:srcCompat="@drawable/ic_guide_available"
-            tools:ignore="VectorDrawableCompat" />
-
-        <ImageView
             android:id="@+id/unlike"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -314,6 +297,16 @@
             android:layout_marginRight="176dp"
             app:srcCompat="@drawable/ic_hotel_black_24dp"
             tools:ignore="VectorDrawableCompat" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="90dp"
+            android:layout_height="64dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="-11dp"
+            android:layout_marginBottom="0dp"
+            android:layout_toEndOf="@+id/mBuy"
+            app:srcCompat="@drawable/ic_group_black_24dp" />
 
 
     </RelativeLayout>

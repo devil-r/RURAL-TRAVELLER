@@ -1,6 +1,6 @@
 package com.example.souhardkataria.ruralt;
 
-
+//Tushar (17CO149) -- start
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.util.Log;
@@ -84,3 +84,5 @@ public class guide_noti extends BaseAdapter {
         // Toast.makeText(context ,lvList.get(i).name,Toast.LENGTH_LONG).show();
         return view1;
     }}
+
+//Tushar (17CO149) -- start

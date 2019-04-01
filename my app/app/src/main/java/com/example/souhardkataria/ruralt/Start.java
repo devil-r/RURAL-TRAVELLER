@@ -10,6 +10,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+// Souhard (17CO147) -- start
+
 public class Start extends AppCompatActivity {
 
     @Override
@@ -69,3 +71,5 @@ public class Start extends AppCompatActivity {
         });
     }
 }
+
+// Souhard (17CO147) -- start

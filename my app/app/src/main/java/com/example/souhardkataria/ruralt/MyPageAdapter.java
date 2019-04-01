@@ -5,6 +5,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
+//Tushar (17CO149) -- start
+
 public class MyPageAdapter extends FragmentStatePagerAdapter {
     public MyPageAdapter(FragmentManager fm) {
         super(fm);
@@ -30,3 +32,5 @@ public class MyPageAdapter extends FragmentStatePagerAdapter {
         return 4;
     }
 }
+
+//Tushar (17CO149) -- end

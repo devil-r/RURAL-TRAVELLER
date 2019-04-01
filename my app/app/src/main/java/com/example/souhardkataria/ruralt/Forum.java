@@ -15,6 +15,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.HashMap;
 import java.util.Map;
 
+//  Akash (17CO206) -- start
 public class Forum extends AppCompatActivity {
     ImageView imageView;
     @Override
@@ -42,3 +43,5 @@ public class Forum extends AppCompatActivity {
         Toast.makeText(this, "Your Query Has been Posted !!", Toast.LENGTH_SHORT).show();
     }
 }
+
+//  Akash (17CO206) -- end

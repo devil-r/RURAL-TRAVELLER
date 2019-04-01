@@ -7,6 +7,8 @@ import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
+// Souhard Kataria (17CO147) -- start
+
 public class Displayeat extends AppCompatActivity {
 
     TextView Title,Contact,Address;
@@ -33,3 +35,5 @@ public class Displayeat extends AppCompatActivity {
 
     }
 }
+
+// Souhard Kataria (17CO147)  -- end

@@ -6,6 +6,7 @@ import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
+//  Avdhesh (17CO210) -- start
 public class DisplayStay extends AppCompatActivity {
 
     TextView Title,Contact,Address;
@@ -32,3 +33,5 @@ public class DisplayStay extends AppCompatActivity {
 
     }
 }
+
+//  Avdhesh (17CO210) -- start

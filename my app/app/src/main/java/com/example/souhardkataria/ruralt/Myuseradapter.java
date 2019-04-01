@@ -4,6 +4,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
+//Tushar,Avdhesh,Parth -- start
 public class Myuseradapter extends FragmentStatePagerAdapter {
 
     public Myuseradapter(FragmentManager fm) {

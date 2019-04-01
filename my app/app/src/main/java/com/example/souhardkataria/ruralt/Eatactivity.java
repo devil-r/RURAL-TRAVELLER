@@ -1,6 +1,6 @@
 package com.example.souhardkataria.ruralt;
 
-//Souhard Kataria (17CO147) --- Start
+//Souhard Kataria (17CO147)  --- Start
 
 import android.content.Context;
 import android.content.Intent;

@@ -1,5 +1,7 @@
 package com.example.souhardkataria.ruralt;
 
+// Parth Dodiya (17CO215) -- start
+
 import android.content.Intent;
 import android.database.DataSetObserver;
 import android.support.annotation.NonNull;
@@ -83,3 +85,5 @@ public class admindash extends AppCompatActivity  {
         });
     }
 }
+
+// Parth Dodiya (17CO215) -- end

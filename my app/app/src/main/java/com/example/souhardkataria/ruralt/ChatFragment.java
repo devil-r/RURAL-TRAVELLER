@@ -1,5 +1,7 @@
 package com.example.souhardkataria.ruralt;
 
+// Avdhesh (17CO210) -- start
+
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -171,6 +173,8 @@ public class ChatFragment extends Fragment {
     }
 
 }
+
+// Avdhesh (17CO210) -- start
 
 
 

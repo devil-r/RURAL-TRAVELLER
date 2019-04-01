@@ -1,5 +1,6 @@
 package com.example.souhardkataria.ruralt;
 
+//  Akshit (17CO129) -- start
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -166,3 +167,5 @@ public class EditProfile1 extends AppCompatActivity {
         }
     }
 }
+
+//  Akshit (17CO129) -- end

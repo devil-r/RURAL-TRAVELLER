@@ -2,6 +2,7 @@ package com.example.souhardkataria.ruralt;
 
 import java.io.Serializable;
 import java.math.BigInteger;
+//Tushar (17CO149) -- start
 
 public class register_users  implements Serializable {
     String name;
@@ -36,3 +37,5 @@ public class register_users  implements Serializable {
     }
 
 }
+
+//Tushar (17CO149) -- end

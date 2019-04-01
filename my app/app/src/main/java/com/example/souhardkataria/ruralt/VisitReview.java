@@ -11,18 +11,22 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
+//Avdhesh (17CO210)
+
 public class VisitReview extends AppCompatActivity {
 
     float r;
     RatingBar mRatingbar;
+    String str;
     float rater;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_visit_review);
         Intent intent = getIntent();
-        mRatingbar=findViewById(R.id.VisitBar);
 
+        mRatingbar=findViewById(R.id.VisitBar);
+        str = intent.getStringExtra("Village");
         mRatingbar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float v, boolean b)
@@ -45,7 +49,7 @@ public class VisitReview extends AppCompatActivity {
             @Override
             public void onSuccess(Void aVoid) {
                 Intent rateintent=new Intent(VisitReview.this,VillageHome.class);
-                //rateintent.putExtra("rate",r);
+                rateintent.putExtra("Village",str);
                 startActivity(rateintent);
 
             }

@@ -1,5 +1,6 @@
 package com.example.souhardkataria.ruralt;
 
+// Avdhesh (17CO210) -- start
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -42,3 +43,6 @@ public class BlankFragment extends Fragment {
     }
 
 }
+
+// Avdhesh (17CO210) -- end
+

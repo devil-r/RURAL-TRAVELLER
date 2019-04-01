@@ -1,5 +1,6 @@
 package com.example.souhardkataria.ruralt;
 
+// Akash (17CO206) -- start
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 

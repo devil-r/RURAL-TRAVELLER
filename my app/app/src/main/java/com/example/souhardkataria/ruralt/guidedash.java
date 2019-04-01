@@ -11,6 +11,8 @@ import android.widget.Button;
 
 import com.example.souhardkataria.ruralt.R;
 
+//Tushar (17CO149) -- start
+
 public class guidedash extends AppCompatActivity {
 
     static Context context;
@@ -41,3 +43,6 @@ public class guidedash extends AppCompatActivity {
         ChatFragment.list.clear();
     }
 }
+
+
+//Tushar (17CO149) -- start

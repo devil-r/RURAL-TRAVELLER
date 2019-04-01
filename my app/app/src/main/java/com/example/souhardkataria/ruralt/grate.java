@@ -10,6 +10,8 @@ import android.widget.Toast;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+//Aashay (17CO201) -- start
+
 public class grate extends AppCompatActivity {
     private String GuideName;
     private int votes;
@@ -51,4 +53,4 @@ public class grate extends AppCompatActivity {
 
 
 }
-//Aashay Maheshwarkar
+//Aashay (17CO201) -- start

@@ -4,6 +4,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+
+//Avdhesh (17CO210) -- start
+
 public class PagerAdapt extends FragmentPagerAdapter {
 
     String[] s = new String[5];

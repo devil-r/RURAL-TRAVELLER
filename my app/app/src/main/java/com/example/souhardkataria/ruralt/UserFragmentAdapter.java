@@ -1,5 +1,6 @@
 package com.example.souhardkataria.ruralt;
 
+// Tushar & Parth (17CO149) -- start
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -34,3 +35,5 @@ public class UserFragmentAdapter extends FragmentPagerAdapter {
         return 2;
     }
 }
+
+// Tushar & Parth (17CO149) -- end

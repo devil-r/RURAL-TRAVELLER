@@ -22,6 +22,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+//Avdhesh (17CO210)--start
+
 public class VillageHome extends AppCompatActivity {
 
     ViewPager viewPager;
@@ -137,3 +139,4 @@ public class VillageHome extends AppCompatActivity {
         }
     }
 }
+//Avdhesh (17CO210)--start

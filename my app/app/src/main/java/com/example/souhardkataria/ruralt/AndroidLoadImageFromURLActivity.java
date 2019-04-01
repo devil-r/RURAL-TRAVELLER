@@ -3,6 +3,8 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.widget.ImageView;
 
+// Aashay  (17CO201) -- start
+
 public class AndroidLoadImageFromURLActivity extends Activity
 {
     @Override
@@ -30,4 +32,6 @@ public class AndroidLoadImageFromURLActivity extends Activity
         imgLoader.DisplayImage(image_url, loader, image);
     }
 }
+
+// Parth Dodiya (17CO215) -- start
 

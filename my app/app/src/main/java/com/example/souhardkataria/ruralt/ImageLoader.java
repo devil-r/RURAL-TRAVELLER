@@ -19,6 +19,8 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.widget.ImageView;
 
+//Aashay (17CO201) -- start
+
 public class ImageLoader {
 
     MemoryCache memoryCache=new MemoryCache();
@@ -171,3 +173,5 @@ public class ImageLoader {
 
 }
 
+
+//Aashay (17CO201) -- end

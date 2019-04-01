@@ -4,6 +4,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
+//Parth (17CO215) -- start
+
 public class PageAdapterAdmin extends FragmentStatePagerAdapter {
 
     public PageAdapterAdmin(FragmentManager fm) {

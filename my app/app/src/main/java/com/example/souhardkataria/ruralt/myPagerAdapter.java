@@ -5,6 +5,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
+//Avdhesh (17CO210) -- start
+
 public class myPagerAdapter extends FragmentStatePagerAdapter {
 
     Fragment frag1,frag2;

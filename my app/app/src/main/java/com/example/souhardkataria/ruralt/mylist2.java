@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+//Tushar (17CO149) -- start
+
 public class mylist2 extends ArrayAdapter<notify_guide> {
     ArrayList<notify_guide> c;
     public mylist2(Context context, ArrayList<notify_guide> n)

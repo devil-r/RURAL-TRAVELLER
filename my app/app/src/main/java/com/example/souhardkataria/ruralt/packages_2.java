@@ -20,6 +20,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+//Tushar (17CO149) -- start
 
 public class packages_2 extends AppCompatActivity implements View.OnClickListener {
     private DatabaseReference mdatabase;
@@ -118,7 +119,7 @@ public class packages_2 extends AppCompatActivity implements View.OnClickListene
                     userId = dataSnapshot.child("uid").getValue(String.class);
                     String name = dataSnapshot.child("name").getValue().toString();
                     FirebaseDatabase.getInstance().getReference().child(uid).child("chats").child(userId).setValue(name);
-                    FirebaseDatabase.getInstance().getReference().child(userId).child("chats").child(uid).setValue("samar");
+                    FirebaseDatabase.getInstance().getReference().child(userId).child("chats").child(uid).setValue(FirebaseAuth.getInstance().getCurrentUser().getUid());
                 }
 
                 @Override
@@ -128,7 +129,7 @@ public class packages_2 extends AppCompatActivity implements View.OnClickListene
             });
 
             String id=mdatabase.push().getKey();
-            uname="samar";
+            uname=FirebaseAuth.getInstance().getCurrentUser().getUid();
             pakage_noti p=new pakage_noti(uname,vv,notid,uid);
             mdatabase=FirebaseDatabase.getInstance().getReference("Notify_user").child("noti");
             mdatabase.child(id).setValue(p);
@@ -148,3 +149,5 @@ public class packages_2 extends AppCompatActivity implements View.OnClickListene
                 finish();
     }}
 }
+
+//Tushar (17CO149) -- end

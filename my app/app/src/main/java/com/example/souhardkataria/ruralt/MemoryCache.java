@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.Map;
 import android.graphics.Bitmap;
 
+//Aashay (17CO201) -- start
+
 public class MemoryCache {
     private Map<String, SoftReference<Bitmap>> cache=Collections.synchronizedMap(new HashMap<String, SoftReference<Bitmap>>());
 
@@ -23,3 +25,5 @@ public class MemoryCache {
         cache.clear();
     }
 }
+
+//Aashay (17CO201) -- end

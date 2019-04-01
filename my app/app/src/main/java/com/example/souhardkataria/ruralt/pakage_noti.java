@@ -1,5 +1,6 @@
 package com.example.souhardkataria.ruralt;
 
+//Tushar (17CO149) -- start
 public class pakage_noti {
     String name;String village;String uid;String notiid;
     pakage_noti()

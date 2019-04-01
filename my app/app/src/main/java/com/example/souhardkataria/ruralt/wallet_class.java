@@ -1,4 +1,5 @@
 package com.example.souhardkataria.ruralt;
+//Tushar (17CO149) -- start
 
 public class wallet_class {
     double money;
@@ -10,3 +11,4 @@ public class wallet_class {
 
     }
 }
+//Tushar (17CO149) -- end

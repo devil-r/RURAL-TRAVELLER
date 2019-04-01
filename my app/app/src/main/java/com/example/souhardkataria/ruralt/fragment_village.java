@@ -12,6 +12,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+// Parth (17CO215) & Akash-- start
+
 public class fragment_village extends android.support.v4.app.Fragment {
     String str;
 
@@ -118,3 +120,5 @@ public class fragment_village extends android.support.v4.app.Fragment {
         }
     }
 }
+
+// Parth (17CO215) & Akash-- start

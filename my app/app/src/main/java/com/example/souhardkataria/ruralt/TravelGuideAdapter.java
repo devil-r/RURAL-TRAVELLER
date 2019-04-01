@@ -23,6 +23,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 import java.util.concurrent.Executor;
 
+
+// Tushar (17CO149) -- start
 public class TravelGuideAdapter extends BaseAdapter {
     ArrayList<register_users> lvList;
     Context context;
@@ -158,4 +160,7 @@ public class TravelGuideAdapter extends BaseAdapter {
         // Toast.makeText(context ,lvList.get(i).name,Toast.LENGTH_LONG).show();
         return view1;
     }
+
 }
+
+// Tushar (17CO149) -- start
