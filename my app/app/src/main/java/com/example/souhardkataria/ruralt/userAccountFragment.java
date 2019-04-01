@@ -124,6 +124,13 @@ public class userAccountFragment extends Fragment {
 
             }
         });
+        Button rate=view.findViewById(R.id.guideRating);
+        rate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            startActivity(new Intent(getActivity(),grate.class));
+            }
+        });
 
 
         return view;

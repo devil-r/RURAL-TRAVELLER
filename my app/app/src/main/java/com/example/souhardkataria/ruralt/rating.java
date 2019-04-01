@@ -43,7 +43,7 @@ public class rating extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rating);
-        mDatabase= FirebaseDatabase.getInstance().getReference().child("Guides");
+        mDatabase= FirebaseDatabase.getInstance().getReference().child("Guide");
         mUserList=findViewById(R.id.user_list);
         final ArrayAdapter<String> arrayAdapter= new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, mUsernames);
         mUserList.setAdapter(arrayAdapter);

@@ -22,9 +22,9 @@ public class grate extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grate);
         mRatingbar=findViewById(R.id.ratingBar);
-        GuideName=getIntent().getExtras().get("guide").toString();
-        votes= Integer.parseInt(getIntent().getExtras().get("votes").toString());
-        rating=Float.parseFloat(getIntent().getExtras().get("rating").toString());
+        //GuideName=getIntent().getExtras().get("guide").toString();
+        votes=23;
+        rating= (float) 4.1;
         mRatingbar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float v, boolean b)
@@ -42,12 +42,13 @@ public class grate extends AppCompatActivity {
     public void Thankyou(View view) {
         Toast.makeText(this, "Thank You For Your Feedback", Toast.LENGTH_SHORT).show();
 
-        FirebaseDatabase.getInstance().getReference().child("Guides").child(GuideName).child("Rating").setValue(r);
-        FirebaseDatabase.getInstance().getReference().child("Guides").child(GuideName).child("Votes").setValue(votes+1);
+        FirebaseDatabase.getInstance().getReference().child("Guide").child("Samar").child("Rating").setValue(r);
+        FirebaseDatabase.getInstance().getReference().child("Guides").child("Samar").child("Votes").setValue(votes+1);
         Intent rateintent=new Intent(grate.this,rating.class);
         //rateintent.putExtra("rate",r);
-        startActivity(rateintent);
+        finish();
     }
 
 
 }
+//Aashay Maheshwarkar

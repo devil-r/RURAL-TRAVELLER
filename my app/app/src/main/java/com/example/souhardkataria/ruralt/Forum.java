@@ -6,6 +6,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
@@ -38,5 +39,6 @@ public class Forum extends AppCompatActivity {
         map.put("Id",user);
         map.put("query",query);
         reference.push().updateChildren(map);
+        Toast.makeText(this, "Your Query Has been Posted !!", Toast.LENGTH_SHORT).show();
     }
 }
