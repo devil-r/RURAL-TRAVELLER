@@ -1,5 +1,7 @@
 package com.example.souhardkataria.ruralt;
 
+//Souhard Kataria (17CO147) --- Start
+
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -120,3 +122,5 @@ public class Visitactivity extends AppCompatActivity {
         }
     }
 }
+
+//Souhard Kataria (17CO147) --- Start

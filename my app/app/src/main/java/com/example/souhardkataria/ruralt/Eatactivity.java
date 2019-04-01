@@ -1,5 +1,6 @@
 package com.example.souhardkataria.ruralt;
 
+//Souhard Kataria (17CO147) --- Start
 
 import android.content.Context;
 import android.content.Intent;
@@ -125,3 +126,6 @@ public class Eatactivity extends AppCompatActivity {
         }
     }
 }
+
+
+//Souhard Kataria (17CO147) --- end

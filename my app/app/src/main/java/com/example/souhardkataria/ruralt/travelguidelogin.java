@@ -36,8 +36,11 @@ public class travelguidelogin extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_travelguidelogin);
         mAuth=FirebaseAuth.getInstance();
+
+        //Souhard Kataria (17CO147) --- Start
         LinearLayout temp=findViewById(R.id.tll);
         temp.getBackground().setAlpha(120);
+        //Souhard Kataria (17CO147) --- end
 
         EditText ee=(EditText)findViewById(R.id.em);
         emaillayout=ee;

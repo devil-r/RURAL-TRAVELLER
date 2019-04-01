@@ -10,7 +10,8 @@
     android:paddingLeft="16dp"
     android:paddingTop="50dp"
     android:paddingRight="16dp"
-    android:background="@drawable/bc"
+
+    android:background="@drawable/rural2"
     >
 
     <ImageView

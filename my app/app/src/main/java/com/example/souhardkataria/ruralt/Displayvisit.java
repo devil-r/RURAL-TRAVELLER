@@ -1,5 +1,7 @@
 package com.example.souhardkataria.ruralt;
 
+//Souhard Kataria (17CO147) --- Start
+
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -33,3 +35,5 @@ public class Displayvisit extends AppCompatActivity {
 
     }
 }
+
+//Souhard Kataria (17CO147) --- end

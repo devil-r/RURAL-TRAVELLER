@@ -37,7 +37,9 @@ public class userAccountFragment extends Fragment {
         // Inflate the layout for this fragment
          View view =inflater.inflate(R.layout.fragment_user_account, container, false);
 
-        Button changepass  = ( Button )view.findViewById(R.id.changepass);
+
+        //Souhard Kataria (17CO147) --- Start
+         Button changepass  = ( Button )view.findViewById(R.id.changepass);
         changepass.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -65,6 +67,8 @@ public class userAccountFragment extends Fragment {
 
 
         });
+        //Souhard Kataria (17CO147) --- end
+
 
         Button details  = ( Button )view.findViewById(R.id.account_details);
         details.setOnClickListener(new View.OnClickListener() {

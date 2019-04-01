@@ -1,5 +1,9 @@
 package com.example.souhardkataria.ruralt;
 
+//Souhard Kataria (17CO147) --- Start
+
+//Change password
+
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
@@ -11,6 +15,7 @@ import android.view.*;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -28,7 +33,8 @@ public class DisplayMessageActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_message);
-
+        LinearLayout pass=findViewById(R.id.reset_password_layout);
+        pass.getBackground().setAlpha(120);
         edtEmail = (EditText) findViewById(R.id.edt_reset_email);
         btnResetPassword = (Button) findViewById(R.id.btn_reset_password);
         btnBack = (Button) findViewById(R.id.btn_back);
@@ -69,4 +75,7 @@ public class DisplayMessageActivity extends AppCompatActivity {
     }
 
 }
+
+// Souhard Kataria (17CO147) --- End
+
 

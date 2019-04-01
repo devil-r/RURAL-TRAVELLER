@@ -1,5 +1,7 @@
 package com.example.souhardkataria.ruralt;
 
+//Souhard Kataria (17CO147) --- Start
+
 import java.io.Serializable;
 
 public class Visit implements Serializable {
@@ -18,3 +20,5 @@ public class Visit implements Serializable {
 
 
 }
+
+//Souhard Kataria (17CO147) --- Start
