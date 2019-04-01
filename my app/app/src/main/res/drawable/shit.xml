@@ -9,5 +9,5 @@
         android:topRightRadius="222dp"
         />
     <solid
-        android:color="#FF5B58"/>
+        android:color="@color/colorPrimary"/>
 </shape>

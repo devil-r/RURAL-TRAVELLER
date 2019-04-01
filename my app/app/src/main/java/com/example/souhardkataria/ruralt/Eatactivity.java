@@ -7,6 +7,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -36,7 +37,7 @@ public class Eatactivity extends AppCompatActivity {
         setContentView(R.layout.activity_visitactivity);
 
         recyclerView = findViewById(R.id.RecVisit);
-        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(Eatactivity.this,2);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         //String string = getIntent().getStringExtra("Village");
         try {
@@ -68,8 +69,8 @@ public class Eatactivity extends AppCompatActivity {
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
 
-        if(list.isEmpty())
-            Toast.makeText(this, "No place specified", Toast.LENGTH_SHORT).show();
+       // if(list.isEmpty())
+         //   Toast.makeText(this, "No place specified", Toast.LENGTH_SHORT).show();
 
 
 
@@ -93,6 +94,7 @@ public class Eatactivity extends AppCompatActivity {
         @Override
         public void onBindViewHolder(@NonNull MyViewHolder viewHolder, int i) {
             viewHolder.view.setText(Eatactivity.lst.get(i));
+            viewHolder.img.setImageDrawable(context.getResources().getDrawable(R.drawable.eat));
         }
 
         @Override
@@ -108,7 +110,7 @@ public class Eatactivity extends AppCompatActivity {
                 super(itemView);
                 view = itemView.findViewById(R.id.Textst);
                 img = itemView.findViewById(R.id.StayImage);
-                view.setOnClickListener(this);
+                itemView.setOnClickListener(this);
             }
 
             @Override

@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class Visit implements Serializable {
 
-        Visit(){}
+        public Visit(){}
         int PlaceId,Distance_Village,User_Rating;
         String Name,Location;
 

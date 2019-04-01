@@ -27,7 +27,7 @@ public class Displayvisit extends AppCompatActivity {
         Visit stay = (Visit) intent.getSerializableExtra("Obj");
 
         Title.setText(stay.Name.toUpperCase());
-        Contact.setText(String.valueOf(stay.Distance_Village));
+        Contact.setText(String.valueOf(stay.Distance_Village)+ " from the Village");
         Address.setText(stay.Location);
         ratingBar.setRating(stay.User_Rating);
 
