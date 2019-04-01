@@ -7,6 +7,6 @@ public class wallet_class {
         money=k;
     }
     wallet_class(){
-        
+
     }
 }

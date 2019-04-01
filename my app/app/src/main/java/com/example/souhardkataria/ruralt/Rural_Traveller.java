@@ -269,6 +269,7 @@ public class Rural_Traveller extends AppCompatActivity /*implements LoaderCallba
                             if (task.isSuccessful()) {
                                 // Sign in success, update UI with the signed-in user's information
                                 Log.d(TAG, "signInWithEmail:success");
+                                Toast.makeText(Rural_Traveller.this,"Loading...",Toast.LENGTH_SHORT).show();
                                 FirebaseUser user = mAuth.getCurrentUser();
                                 startActivity(new Intent(Rural_Traveller.this,userdash.class));
                                 //updateUI(user);
