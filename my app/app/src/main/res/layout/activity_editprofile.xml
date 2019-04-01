@@ -1,84 +1,266 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    android:fillViewport="false"
-    xmlns:android="http://schemas.android.com/apk/res/android" >
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
     tools:context=".editprofile"
-    android:background="@drawable/bc">
+    >
+
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/photo"
-        android:layout_width="100sp"
-        android:layout_height="100sp"
-
+        android:id="@+id/photo1"
+        android:layout_width="150sp"
+        android:layout_height="150sp"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="45dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="44dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:src="@drawable/img"
         app:civ_border_color="@color/colorPrimary"
         app:civ_border_width="5dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.125"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:foregroundGravity="center"/>
 
-
-    <EditText
-        android:id="@+id/Name"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:hint="Name will be dispayed here"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.763"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/Email"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:hint="Email will be dispayed here"
-        android:inputType="textEmailAddress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.737"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Name" />
-
-
-    <EditText
-        android:id="@+id/Gender"
-        android:layout_width="75sp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="45dp"
-        android:layout_marginLeft="45dp"
-        android:layout_marginTop="20dp"
-        android:hint="Gender"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Email" />
-
-    <EditText
-        android:id="@+id/Dob"
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
-        android:layout_height="47dp"
-        android:layout_marginStart="45dp"
-        android:layout_marginLeft="45dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="212dp"
-        android:layout_marginRight="212dp"
-        android:hint="DOB(dd/mm/yyyy)"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="48dp"
+        android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Gender" />
+        app:layout_constraintTop_toBottomOf="@+id/photo1"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:id="@+id/Name1"
+            android:layout_width="413dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="Name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/photo1"
+
+                />
+
+            <EditText
+                android:id="@+id/Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:hint="Enter Name"
+                android:paddingLeft="125dp"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="@id/Name1"
+
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Email1"
+            android:layout_width="413dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="Email"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/photo1"
+
+                />
+
+            <EditText
+                android:id="@+id/Email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:hint="Enter Email"
+                android:paddingLeft="125dp"
+                app:layout_constraintStart_toStartOf="@id/Name1"
+
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Gender1"
+            android:layout_width="413dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="Gender"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/Email1"
+
+                />
+
+            <EditText
+                android:id="@+id/Gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:hint="Enter Gender"
+                android:paddingLeft="125dp"
+                app:layout_constraintStart_toStartOf="@id/Gender1"
+
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Dob1"
+            android:layout_width="413dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="Date ofBirth"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/Dob1"
+
+                />
+
+            <EditText
+                android:id="@+id/Dob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:hint="Enter Date of Birth"
+                android:paddingLeft="125dp"
+                app:layout_constraintStart_toStartOf="@id/Dob1"
+
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Mob1"
+            android:layout_width="413dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="Mobile No"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/Mob1"
+
+                />
+
+            <EditText
+                android:id="@+id/Mob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:hint="Enter Mobile Number"
+                android:paddingLeft="125dp"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="@id/Mob1"
+
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Add1"
+            android:layout_width="413dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="Address"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/Add1"
+
+                />
+
+            <EditText
+                android:id="@+id/Add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:hint="Enter Address"
+                android:paddingLeft="125dp"
+                app:layout_constraintStart_toStartOf="@id/Add1"
+
+                />
+
+
+        </LinearLayout>
+    </LinearLayout>
 
     <Button
         android:id="@+id/button"
@@ -86,53 +268,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:background="@drawable/shit"
         android:onClick="clicked"
         android:text="Submit"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.53"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
-
-    <EditText
-        android:id="@+id/Mob"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="45dp"
-        android:layout_marginLeft="45dp"
-        android:layout_marginTop="33dp"
-        android:layout_marginEnd="145dp"
-        android:layout_marginRight="145dp"
-        android:layout_marginBottom="33dp"
-        android:ems="10"
-        android:hint="Mobile Number"
-        android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/editText2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Dob" />
-
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="45dp"
-        android:layout_marginLeft="45dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="153dp"
-        android:layout_marginRight="153dp"
-        android:ems="10"
-        android:hint="Address"
-        android:inputType="textMultiLine"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Mob" />
-
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
 </android.support.constraint.ConstraintLayout>
-</ScrollView>

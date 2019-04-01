@@ -30,14 +30,14 @@ public class display_profile extends AppCompatActivity {
         final TextView email=findViewById(R.id.Email);
         final TextView gender=findViewById(R.id.Gender);
         final TextView dob=findViewById(R.id.Dob);
-        final TextView mob=findViewById(R.id.editText);
-        final TextView add=findViewById(R.id.editText2);
-        final ImageView image = findViewById(R.id.photo);
+        final TextView mob=findViewById(R.id.Mob);
+        final TextView add=findViewById(R.id.Add);
+        final ImageView image = findViewById(R.id.photo1);
         Button b=(Button) findViewById(R.id.button);
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(display_profile.this,editprofile.class));
+                startActivity(new Intent(display_profile.this,editprofile2.class));
             }
         });
         FirebaseAuth mAuth=FirebaseAuth.getInstance();
@@ -54,8 +54,8 @@ public class display_profile extends AppCompatActivity {
                 email.setText(us.Email);
                 gender.setText(us.Gender);
                 dob.setText(us.Date_of_Birth);
-                mob.setText(us.Mob);
-                add.setText(us.Add);
+                mob.setText(us.MobileNumber);
+                add.setText(us.Address);
                 url = us.image;
                 Glide.with(getApplicationContext()).load(url).into(image);
             }}
