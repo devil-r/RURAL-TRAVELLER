@@ -7,8 +7,8 @@
     android:orientation="vertical"
     tools:context=".travelguidelogin"
     android:padding="12dp"
-
-    android:background="@drawable/bc">
+    android:id="@+id/tll"
+    android:background="@drawable/rural2">
 
     <ImageView
         android:id="@+id/imageView3"

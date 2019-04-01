@@ -12,6 +12,7 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -35,6 +36,9 @@ public class travelguidelogin extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_travelguidelogin);
         mAuth=FirebaseAuth.getInstance();
+        LinearLayout temp=findViewById(R.id.tll);
+        temp.getBackground().setAlpha(120);
+
         EditText ee=(EditText)findViewById(R.id.em);
         emaillayout=ee;
         EditText pp=(EditText)findViewById(R.id.pass);
