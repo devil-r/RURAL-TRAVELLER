@@ -47,6 +47,7 @@ public class display_profile extends AppCompatActivity {
                 i.putExtra("Mob",us.MobileNumber);
                 i.putExtra("Add",us.Address);
                 i.putExtra("image",us.image);
+                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(i);
 
             }
