@@ -2,7 +2,7 @@ package com.example.souhardkataria.ruralt;
 //Tushar (17CO149) -- start
 
 public class wallet_class {
-    double money;
+    public double money;
     wallet_class(Double k)
     {
         money=k;

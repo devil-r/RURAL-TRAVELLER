@@ -8,7 +8,7 @@ import android.graphics.Bitmap;
 //Aashay (17CO201) -- start
 
 public class MemoryCache {
-    private Map<String, SoftReference<Bitmap>> cache=Collections.synchronizedMap(new HashMap<String, SoftReference<Bitmap>>());
+    public Map<String, SoftReference<Bitmap>> cache=Collections.synchronizedMap(new HashMap<String, SoftReference<Bitmap>>());
 
     public Bitmap get(String id){
         if(!cache.containsKey(id))

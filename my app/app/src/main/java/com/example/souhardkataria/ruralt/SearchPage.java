@@ -163,6 +163,7 @@ public class SearchPage extends AppCompatActivity {
                 public void onClick(View view) {
                     Intent in=new Intent(getApplicationContext(),VillageHome.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     in.putExtra("Village",ADPids.get(i));
+
                     startActivity(in);
                 }
             });

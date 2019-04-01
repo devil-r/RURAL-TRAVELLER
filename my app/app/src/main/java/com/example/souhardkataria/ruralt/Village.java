@@ -4,7 +4,7 @@ package com.example.souhardkataria.ruralt;
 
 public class Village {
 
-    String VillageId,
+    public String VillageId,
             Name,
             State,
             District,
@@ -12,7 +12,7 @@ public class Village {
             Nearest_Railway_Station,
             Nearest_Airport,
             Nearest_City;
-    int user_rating,pincode;
+    public int user_rating,pincode;
 
 
     public Village() {

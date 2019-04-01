@@ -4,7 +4,7 @@ package com.example.souhardkataria.ruralt;
 
 public class Messages {
 
-    String message,sender,reciever,id;
+    public String message,sender,reciever,id;
 
     public String getMessage() {
         return message;

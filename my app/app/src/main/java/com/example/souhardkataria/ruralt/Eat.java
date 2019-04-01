@@ -7,9 +7,9 @@ import java.io.Serializable;
 public class Eat implements Serializable {
 
     public Eat(){}
-    int id,rating;
-    String Name,Address;
-    long Contact;
+    public int id,rating;
+    public String Name,Address;
+    public long Contact;
 
     public Eat(int id, int rating, String name, String address, long contact) {
         this.id = id;

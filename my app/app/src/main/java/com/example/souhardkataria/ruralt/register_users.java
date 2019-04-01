@@ -5,17 +5,17 @@ import java.math.BigInteger;
 //Tushar (17CO149) -- start
 
 public class register_users  implements Serializable {
-    String name;
-    String email;
-    String phno;
-    String dob;
-    String gender;
-    String village;
-    String address;
-    String about;
-    String yre;
-    String id;
-    String pass;
+    public String name;
+    public String email;
+    public String phno;
+    public String dob;
+    public String gender;
+    public String village;
+    public String address;
+    public String about;
+    public String yre;
+    public String id;
+    public String pass;
     public register_users()
     {
 

@@ -3,13 +3,13 @@ package com.example.souhardkataria.ruralt;
 //Parth (17CO215) -- start
 
 public class PackageClass {
-    String Description;
-    String Duration;
-    String Guide;
-    String Image;
-    String Overview;
-    String Rate;
-    String name;
+    public String Description;
+    public String Duration;
+    public String Guide;
+    public String Image;
+    public String Overview;
+    public String Rate;
+    public String name;
 
     public PackageClass() {
     }

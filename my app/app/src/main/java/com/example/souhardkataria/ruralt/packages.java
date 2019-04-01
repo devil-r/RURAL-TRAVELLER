@@ -28,10 +28,10 @@ import static android.system.Os.remove;
 //Aashay (17CO201) -- start
 
 public class packages extends AppCompatActivity {
-    static int i=0;
-    private DatabaseReference mdatabase;
-    String val;
-    String uname="";
+    public static int i=0;
+    public DatabaseReference mdatabase;
+    public String val;
+    public String uname="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

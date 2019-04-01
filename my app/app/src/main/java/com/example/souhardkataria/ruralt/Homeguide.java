@@ -15,7 +15,7 @@ import android.view.ViewGroup;
  */
 public class Homeguide extends Fragment {
 
-    CardView c;
+    public CardView c;
     public Homeguide() {
         // Required empty public constructor
     }
