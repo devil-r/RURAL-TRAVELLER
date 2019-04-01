@@ -5,6 +5,8 @@
     android:textSize="17sp"
     android:paddingTop="3sp"
     android:paddingBottom="3sp"
+    android:textColor="@color/tg"
+    android:background="@drawable/custom_s_border"
     android:text="hello"
     android:paddingLeft="10sp"
     android:textAlignment="gravity"

@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:fillViewport="true"
+    android:background="#ddd"
     xmlns:android="http://schemas.android.com/apk/res/android" >
 <android.support.constraint.ConstraintLayout
     android:layout_width="match_parent"
@@ -28,6 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Question"
+            android:textColor="@color/tg"
             android:textSize="20sp" />
 
         <TextView
@@ -35,6 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20sp"
+            android:textColor="@color/tg"
             android:text="answer" />
 
         <EditText
@@ -45,6 +48,7 @@
             android:ems="10"
             android:inputType="textMultiLine"
             android:singleLine="false"
+            android:textColor="@color/tg"
             android:textSize="15sp" />
 
         <Button
