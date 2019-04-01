@@ -5,7 +5,7 @@
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
     tools:context=".editprofile2"
-    >
+    android:background="#FFF">
 
 
     <de.hdodenhof.circleimageview.CircleImageView
@@ -46,6 +46,8 @@
 
             <TextView
                 android:layout_width="75dp"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
@@ -66,6 +68,8 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
                 android:hint="Enter Name"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
                 android:paddingLeft="125dp"
                 android:textAlignment="center"
                 app:layout_constraintStart_toStartOf="@id/Name1"
@@ -86,6 +90,8 @@
                 android:layout_width="75dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
                 android:layout_marginLeft="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
@@ -104,6 +110,8 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
                 android:hint="Enter Email"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
                 android:paddingLeft="125dp"
                 app:layout_constraintStart_toStartOf="@id/Name1"
 
@@ -122,6 +130,8 @@
             <TextView
                 android:layout_width="75dp"
                 android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginEnd="8dp"
@@ -139,8 +149,11 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginEnd="8dp"
+
                 android:layout_marginRight="8dp"
                 android:hint="Enter Gender"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
                 android:paddingLeft="125dp"
                 app:layout_constraintStart_toStartOf="@id/Gender1"
 
@@ -153,6 +166,8 @@
             android:id="@+id/Dob1"
             android:layout_width="413dp"
             android:layout_height="match_parent"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
             android:orientation="horizontal"
             android:paddingBottom="20dp">
 
@@ -163,6 +178,8 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
                 android:text="Date ofBirth"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/Dob1"
@@ -178,6 +195,8 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
                 android:hint="Enter Date of Birth"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
                 android:paddingLeft="125dp"
                 app:layout_constraintStart_toStartOf="@id/Dob1"
 
@@ -199,6 +218,8 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginEnd="8dp"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
                 android:layout_marginRight="8dp"
                 android:text="Mobile No"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -215,6 +236,8 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
                 android:hint="Enter Mobile Number"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
                 android:paddingLeft="125dp"
                 android:textAlignment="center"
                 app:layout_constraintStart_toStartOf="@id/Mob1"
@@ -237,6 +260,8 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginEnd="8dp"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
                 android:layout_marginRight="8dp"
                 android:text="Address"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -253,6 +278,8 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
                 android:hint="Enter Address"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
                 android:paddingLeft="125dp"
                 app:layout_constraintStart_toStartOf="@id/Add1"
 

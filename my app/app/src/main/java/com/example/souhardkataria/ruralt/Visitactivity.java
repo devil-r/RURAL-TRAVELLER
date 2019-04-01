@@ -68,7 +68,7 @@ public class Visitactivity extends AppCompatActivity {
         }
 
         if(list.isEmpty())
-            Toast.makeText(this, "No place specified", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Loading", Toast.LENGTH_SHORT).show();
 
 
 

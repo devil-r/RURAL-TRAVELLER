@@ -1,5 +1,6 @@
 package com.example.souhardkataria.ruralt;
 
+
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -110,27 +111,7 @@ public class DisplayMessageActivity2 extends AppCompatActivity {
 
         //_signupButton.setEnabled(false);
 
-/*        final ProgressDialog progressDialog = new ProgressDialog(DisplayMessageActivity2.this,
-                R.style.AppTheme);
-        progressDialog.setIndeterminate(true);
-        progressDialog.setMessage("Creating Account...");
-        progressDialog.show();
 
-        String name = _nameText.getText().toString();
-        String email = _emailText.getText().toString();
-        String password = _passwordText.getText().toString();
-
-       new android.os.Handler().postDelayed(
-                new Runnable() {
-                    public void run() {
-                        // On complete call either onSignupSuccess or onSignupFailed
-                        // depending on success
-                        onSignupSuccess();
-                        // onSignupFailed();
-                        progressDialog.dismiss();
-                    }
-                }, 3000);
-*/
     }
 
 

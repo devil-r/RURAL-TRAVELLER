@@ -5,6 +5,7 @@
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
     tools:context=".editprofile"
+    android:background="#FFF"
     >
 
 
@@ -51,6 +52,8 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
                 android:text="Name"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/photo1"
@@ -67,6 +70,8 @@
                 android:layout_marginRight="8dp"
                 android:hint="Enter Name"
                 android:paddingLeft="125dp"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
                 android:textAlignment="center"
                 app:layout_constraintStart_toStartOf="@id/Name1"
 
@@ -88,6 +93,8 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginEnd="8dp"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
                 android:layout_marginRight="8dp"
                 android:text="Email"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -99,6 +106,8 @@
                 android:id="@+id/Email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginEnd="8dp"
@@ -123,6 +132,8 @@
                 android:layout_width="75dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
                 android:layout_marginLeft="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
@@ -142,6 +153,8 @@
                 android:layout_marginRight="8dp"
                 android:hint="Enter Gender"
                 android:paddingLeft="125dp"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
                 app:layout_constraintStart_toStartOf="@id/Gender1"
 
                 />
@@ -158,6 +171,8 @@
 
             <TextView
                 android:layout_width="75dp"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
@@ -174,6 +189,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
                 android:layout_marginLeft="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
@@ -195,6 +212,8 @@
 
             <TextView
                 android:layout_width="75dp"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
@@ -211,6 +230,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
                 android:layout_marginLeft="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
@@ -236,6 +257,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
                 android:text="Address"
@@ -249,6 +272,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
                 android:layout_marginLeft="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"

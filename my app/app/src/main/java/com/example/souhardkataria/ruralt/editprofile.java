@@ -163,6 +163,7 @@ public class editprofile extends AppCompatActivity {
         reference.child("Users").child(user).setValue(map);
         if(!Name.isEmpty() && !Email.isEmpty() && !Gender.isEmpty() && !Dob.isEmpty() && !Mob.isEmpty() && !Add.isEmpty() && android.util.Patterns.EMAIL_ADDRESS.matcher(Email).matches() && Mob.length()==10) {
             Intent i = new Intent(this, Rural_Traveller.class);
+            i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(i);
         }
     }

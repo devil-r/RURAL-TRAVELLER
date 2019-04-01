@@ -22,6 +22,8 @@ import com.google.firebase.database.ValueEventListener;
 public class display_profile extends AppCompatActivity {
 
     String url;
+    UserAK us;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +39,17 @@ public class display_profile extends AppCompatActivity {
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(display_profile.this,editprofile2.class));
+                Intent i = new Intent(display_profile.this,editprofile2.class);
+                i.putExtra("name",us.Name);
+                i.putExtra("email",us.Email);
+                i.putExtra("Gender",us.Gender);
+                i.putExtra("Dob",us.Date_of_Birth);
+                i.putExtra("Mob",us.MobileNumber);
+                i.putExtra("Add",us.Address);
+                i.putExtra("image",us.image);
+                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(i);
+
             }
         });
         FirebaseAuth mAuth=FirebaseAuth.getInstance();
@@ -48,8 +60,8 @@ public class display_profile extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if(dataSnapshot.exists())
                 {
-                UserAK us=dataSnapshot.getValue(UserAK.class);
-                while(us==null);
+                    us = dataSnapshot.getValue(UserAK.class);
+                    while(us==null);
                 name.setText(us.Name);
                 email.setText(us.Email);
                 gender.setText(us.Gender);
